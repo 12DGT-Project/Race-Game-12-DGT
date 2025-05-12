@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwrt81rmqpksp"]
+
+[ext_resource type="PackedScene" uid="uid://w1uijgp7li2n" path="res://Scenes/Car Scene.tscn" id="2_j0p05"]
+
+[node name="World" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+data = {
+"cells": PackedInt32Array(65529, 4, 17, 65530, 4, 17)
+}
+
+[node name="Player" parent="." instance=ExtResource("2_j0p05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.8853, 0)

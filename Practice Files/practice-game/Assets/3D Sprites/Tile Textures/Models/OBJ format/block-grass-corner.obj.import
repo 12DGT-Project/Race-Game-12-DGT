@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1qql4q8od0mp"
+path="res://.godot/imported/block-grass-corner.obj-c9cd0c89f6f82a5ccdd3ed533aba31e2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/block-grass-corner.obj-c9cd0c89f6f82a5ccdd3ed533aba31e2.mesh"]
+
+source_file="res://Assets/3D Sprites/Tile Textures/Models/OBJ format/block-grass-corner.obj"
+dest_files=["res://.godot/imported/block-grass-corner.obj-c9cd0c89f6f82a5ccdd3ed533aba31e2.mesh", "res://.godot/imported/block-grass-corner.obj-c9cd0c89f6f82a5ccdd3ed533aba31e2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

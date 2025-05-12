@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djs5lgitomgfo"
+path="res://.godot/imported/door-open.obj-0235b22b8c799903f3d961c6a68e743e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/door-open.obj-0235b22b8c799903f3d961c6a68e743e.mesh"]
+
+source_file="res://Assets/3D Sprites/Tile Textures/Models/OBJ format/door-open.obj"
+dest_files=["res://.godot/imported/door-open.obj-0235b22b8c799903f3d961c6a68e743e.mesh", "res://.godot/imported/door-open.obj-0235b22b8c799903f3d961c6a68e743e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
