@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcou5bxu5lrjr"
+path="res://.godot/imported/building-type-s.obj-2924c1efcc576bc717b39a83e8facacc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-type-s.obj-2924c1efcc576bc717b39a83e8facacc.mesh"]
+
+source_file="res://downloads/ROADS/Models/OBJ format/building-type-s.obj"
+dest_files=["res://.godot/imported/building-type-s.obj-2924c1efcc576bc717b39a83e8facacc.mesh", "res://.godot/imported/building-type-s.obj-2924c1efcc576bc717b39a83e8facacc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

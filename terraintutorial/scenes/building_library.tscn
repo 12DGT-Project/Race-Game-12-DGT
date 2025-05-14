@@ -1,0 +1,169 @@
+[gd_scene load_steps=56 format=3 uid="uid://c6m0gh404nrdi"]
+
+[ext_resource type="PackedScene" uid="uid://ik1l6euwkr7r" path="res://downloads/buildings/Models/GLTF format/detail_awning.glb" id="1_l33sn"]
+[ext_resource type="PackedScene" uid="uid://bxww8jh45aw03" path="res://downloads/buildings/Models/GLTF format/detail_awningWide.glb" id="2_ifvcq"]
+[ext_resource type="PackedScene" uid="uid://cuvy0rmp5mab3" path="res://downloads/buildings/Models/GLTF format/detail_overhang.glb" id="3_em8vl"]
+[ext_resource type="PackedScene" uid="uid://7lt40qywy2ph" path="res://downloads/buildings/Models/GLTF format/detail_overhangWide.glb" id="4_wd873"]
+[ext_resource type="PackedScene" uid="uid://c1u42371lamv3" path="res://downloads/buildings/Models/GLTF format/detail_umbrella.glb" id="5_pqq6c"]
+[ext_resource type="PackedScene" uid="uid://bfabgrb1lny6b" path="res://downloads/buildings/Models/GLTF format/detail_umbrellaDetailed.glb" id="6_rq53t"]
+[ext_resource type="PackedScene" uid="uid://bjqfd3pdhv5ta" path="res://downloads/buildings/Models/GLTF format/large_buildingA.glb" id="7_dxlb2"]
+[ext_resource type="PackedScene" uid="uid://cdg40sift2ha7" path="res://downloads/buildings/Models/GLTF format/large_buildingB.glb" id="8_vn5p3"]
+[ext_resource type="PackedScene" uid="uid://tua0oao2kkp8" path="res://downloads/buildings/Models/GLTF format/large_buildingC.glb" id="9_ao8eg"]
+[ext_resource type="PackedScene" uid="uid://bfwypngi5kxqh" path="res://downloads/buildings/Models/GLTF format/large_buildingD.glb" id="10_4xprp"]
+[ext_resource type="PackedScene" uid="uid://erlr7ak2dq73" path="res://downloads/buildings/Models/GLTF format/large_buildingE.glb" id="11_umxtx"]
+[ext_resource type="PackedScene" uid="uid://cyfyptd2ajsh1" path="res://downloads/buildings/Models/GLTF format/large_buildingF.glb" id="12_jwo5c"]
+[ext_resource type="PackedScene" uid="uid://1gbdo1p0aoa3" path="res://downloads/buildings/Models/GLTF format/low_buildingA.glb" id="13_kue3v"]
+[ext_resource type="PackedScene" uid="uid://bexutaoksmjmg" path="res://downloads/buildings/Models/GLTF format/low_buildingB.glb" id="14_88r8k"]
+[ext_resource type="PackedScene" uid="uid://cdhvqj8wyvrhs" path="res://downloads/buildings/Models/GLTF format/low_buildingC.glb" id="15_nwgo6"]
+[ext_resource type="PackedScene" uid="uid://bd5ltlmw72yhg" path="res://downloads/buildings/Models/GLTF format/low_buildingD.glb" id="16_a21ur"]
+[ext_resource type="PackedScene" uid="uid://bnkrqj8d7dns3" path="res://downloads/buildings/Models/GLTF format/low_buildingE.glb" id="17_5fubo"]
+[ext_resource type="PackedScene" uid="uid://dinwr6sgc7de" path="res://downloads/buildings/Models/GLTF format/low_buildingF.glb" id="18_xpeny"]
+[ext_resource type="PackedScene" uid="uid://dake2caljyse3" path="res://downloads/buildings/Models/GLTF format/low_buildingG.glb" id="19_e8hqc"]
+[ext_resource type="PackedScene" uid="uid://cbcnqllb1ud1s" path="res://downloads/buildings/Models/GLTF format/low_buildingH.glb" id="20_0io7y"]
+[ext_resource type="PackedScene" uid="uid://bvhd52tbg25oe" path="res://downloads/buildings/Models/GLTF format/low_buildingI.glb" id="21_vujm6"]
+[ext_resource type="PackedScene" uid="uid://bxtew37d36li1" path="res://downloads/buildings/Models/GLTF format/low_buildingJ.glb" id="22_5lwbq"]
+[ext_resource type="PackedScene" uid="uid://b0fvj4j6efc7b" path="res://downloads/buildings/Models/GLTF format/low_buildingK.glb" id="23_s6108"]
+[ext_resource type="PackedScene" uid="uid://cxpc3ag4s4ftg" path="res://downloads/buildings/Models/GLTF format/low_buildingL.glb" id="24_tmqfy"]
+[ext_resource type="PackedScene" uid="uid://dpd6k2qemy8xh" path="res://downloads/buildings/Models/GLTF format/low_buildingM.glb" id="25_2x0un"]
+[ext_resource type="PackedScene" uid="uid://deubq4jk4y5nq" path="res://downloads/buildings/Models/GLTF format/low_buildingN.glb" id="26_s572k"]
+[ext_resource type="PackedScene" uid="uid://d2mjvxoykhf25" path="res://downloads/buildings/Models/GLTF format/low_wideA.glb" id="27_v6rja"]
+[ext_resource type="PackedScene" uid="uid://ct4ds0get3e5e" path="res://downloads/buildings/Models/GLTF format/low_wideB.glb" id="28_575p1"]
+[ext_resource type="PackedScene" uid="uid://c21jfskw0pba" path="res://downloads/buildings/Models/GLTF format/roof_center.glb" id="29_digxf"]
+[ext_resource type="PackedScene" uid="uid://cqbpfwohvf8r3" path="res://downloads/buildings/Models/GLTF format/roof_corner.glb" id="30_u6ax5"]
+[ext_resource type="PackedScene" uid="uid://b2canlaehmq1g" path="res://downloads/buildings/Models/GLTF format/roof_overhang.glb" id="31_vvyxb"]
+[ext_resource type="PackedScene" uid="uid://bapftb313316h" path="res://downloads/buildings/Models/GLTF format/roof_side.glb" id="32_b63h5"]
+[ext_resource type="PackedScene" uid="uid://ba1vh4kw6t0c7" path="res://downloads/buildings/Models/GLTF format/sign_billboard.glb" id="33_nkhcj"]
+[ext_resource type="PackedScene" uid="uid://c8f4fa016vtqg" path="res://downloads/buildings/Models/GLTF format/sign_hospital.glb" id="34_h3tc8"]
+[ext_resource type="PackedScene" uid="uid://basfhxjr1nqni" path="res://downloads/buildings/Models/GLTF format/skyscraperA.glb" id="35_y858d"]
+[ext_resource type="PackedScene" uid="uid://eiom3mf3wudw" path="res://downloads/buildings/Models/GLTF format/skyscraperB.glb" id="36_jg65p"]
+[ext_resource type="PackedScene" uid="uid://db1yhskpitrcp" path="res://downloads/buildings/Models/GLTF format/skyscraperC.glb" id="37_0s2u5"]
+[ext_resource type="PackedScene" uid="uid://bsm54cdis73w2" path="res://downloads/buildings/Models/GLTF format/skyscraperD.glb" id="38_igxy2"]
+[ext_resource type="PackedScene" uid="uid://daj06vws3w7of" path="res://downloads/buildings/Models/GLTF format/skyscraperE.glb" id="39_kgkhy"]
+[ext_resource type="PackedScene" uid="uid://cwus44dt7mnqc" path="res://downloads/buildings/Models/GLTF format/skyscraperF.glb" id="40_7fpni"]
+[ext_resource type="PackedScene" uid="uid://1s6lb65qi4lt" path="res://downloads/buildings/Models/GLTF format/small_buildingA.glb" id="41_klah4"]
+[ext_resource type="PackedScene" uid="uid://chcs54cg5gu7v" path="res://downloads/buildings/Models/GLTF format/small_buildingB.glb" id="42_2h8sd"]
+[ext_resource type="PackedScene" uid="uid://blih34s0app3s" path="res://downloads/buildings/Models/GLTF format/small_buildingC.glb" id="43_8jl3r"]
+[ext_resource type="PackedScene" uid="uid://bgre5vpjf6a6j" path="res://downloads/buildings/Models/GLTF format/small_buildingD.glb" id="44_ydbrm"]
+[ext_resource type="PackedScene" uid="uid://104tbftiaab4" path="res://downloads/buildings/Models/GLTF format/small_buildingE.glb" id="45_66aen"]
+[ext_resource type="PackedScene" uid="uid://d2wooaqffk6qh" path="res://downloads/buildings/Models/GLTF format/small_buildingF.glb" id="46_0mdyw"]
+[ext_resource type="PackedScene" uid="uid://cmfuycji6stmc" path="res://downloads/buildings/Models/GLTF format/wall_doorA.glb" id="47_w1y58"]
+[ext_resource type="PackedScene" uid="uid://kxlfecumyxsc" path="res://downloads/buildings/Models/GLTF format/wall_doorB.glb" id="48_1eccu"]
+[ext_resource type="PackedScene" uid="uid://iybwyau1mpt5" path="res://downloads/buildings/Models/GLTF format/wall_solid.glb" id="49_hj335"]
+[ext_resource type="PackedScene" uid="uid://duhfm4k2cc0aq" path="res://downloads/buildings/Models/GLTF format/wall_windowA.glb" id="50_mn3ra"]
+[ext_resource type="PackedScene" uid="uid://b7oy0cbyukg3j" path="res://downloads/buildings/Models/GLTF format/wall_windowB.glb" id="51_o5rjw"]
+[ext_resource type="PackedScene" uid="uid://btooobr5jaiai" path="res://downloads/buildings/Models/GLTF format/wall_windowC.glb" id="52_sdysc"]
+[ext_resource type="PackedScene" uid="uid://bcvr4qya4vcxr" path="res://downloads/buildings/Models/GLTF format/wall_windowD.glb" id="53_s56my"]
+[ext_resource type="PackedScene" uid="uid://co7pwaftur4yq" path="res://downloads/buildings/Models/GLTF format/wall_windowE.glb" id="54_rsv0r"]
+[ext_resource type="PackedScene" uid="uid://bv5c7302dv4y6" path="res://downloads/buildings/Models/GLTF format/wall_windowF.glb" id="55_50621"]
+
+[node name="building library" type="Node3D"]
+
+[node name="detail_awning2" parent="." instance=ExtResource("1_l33sn")]
+
+[node name="detail_awningWide2" parent="." instance=ExtResource("2_ifvcq")]
+
+[node name="detail_overhang2" parent="." instance=ExtResource("3_em8vl")]
+
+[node name="detail_overhangWide2" parent="." instance=ExtResource("4_wd873")]
+
+[node name="detail_umbrella2" parent="." instance=ExtResource("5_pqq6c")]
+
+[node name="detail_umbrellaDetailed2" parent="." instance=ExtResource("6_rq53t")]
+
+[node name="large_buildingA2" parent="." instance=ExtResource("7_dxlb2")]
+
+[node name="large_buildingB2" parent="." instance=ExtResource("8_vn5p3")]
+
+[node name="large_buildingC2" parent="." instance=ExtResource("9_ao8eg")]
+
+[node name="large_buildingD2" parent="." instance=ExtResource("10_4xprp")]
+
+[node name="large_buildingE2" parent="." instance=ExtResource("11_umxtx")]
+
+[node name="large_buildingF2" parent="." instance=ExtResource("12_jwo5c")]
+
+[node name="low_buildingA2" parent="." instance=ExtResource("13_kue3v")]
+
+[node name="low_buildingB2" parent="." instance=ExtResource("14_88r8k")]
+
+[node name="low_buildingC2" parent="." instance=ExtResource("15_nwgo6")]
+
+[node name="low_buildingD2" parent="." instance=ExtResource("16_a21ur")]
+
+[node name="low_buildingE2" parent="." instance=ExtResource("17_5fubo")]
+
+[node name="low_buildingF2" parent="." instance=ExtResource("18_xpeny")]
+
+[node name="low_buildingG2" parent="." instance=ExtResource("19_e8hqc")]
+
+[node name="low_buildingH2" parent="." instance=ExtResource("20_0io7y")]
+
+[node name="low_buildingI2" parent="." instance=ExtResource("21_vujm6")]
+
+[node name="low_buildingJ2" parent="." instance=ExtResource("22_5lwbq")]
+
+[node name="low_buildingK2" parent="." instance=ExtResource("23_s6108")]
+
+[node name="low_buildingL2" parent="." instance=ExtResource("24_tmqfy")]
+
+[node name="low_buildingM2" parent="." instance=ExtResource("25_2x0un")]
+
+[node name="low_buildingN2" parent="." instance=ExtResource("26_s572k")]
+
+[node name="low_wideA2" parent="." instance=ExtResource("27_v6rja")]
+
+[node name="low_wideB2" parent="." instance=ExtResource("28_575p1")]
+
+[node name="roof_center2" parent="." instance=ExtResource("29_digxf")]
+
+[node name="roof_corner2" parent="." instance=ExtResource("30_u6ax5")]
+
+[node name="roof_overhang2" parent="." instance=ExtResource("31_vvyxb")]
+
+[node name="roof_side2" parent="." instance=ExtResource("32_b63h5")]
+
+[node name="sign_billboard2" parent="." instance=ExtResource("33_nkhcj")]
+
+[node name="sign_hospital2" parent="." instance=ExtResource("34_h3tc8")]
+
+[node name="skyscraperA2" parent="." instance=ExtResource("35_y858d")]
+
+[node name="skyscraperB2" parent="." instance=ExtResource("36_jg65p")]
+
+[node name="skyscraperC2" parent="." instance=ExtResource("37_0s2u5")]
+
+[node name="skyscraperD2" parent="." instance=ExtResource("38_igxy2")]
+
+[node name="skyscraperE2" parent="." instance=ExtResource("39_kgkhy")]
+
+[node name="skyscraperF2" parent="." instance=ExtResource("40_7fpni")]
+
+[node name="small_buildingA2" parent="." instance=ExtResource("41_klah4")]
+
+[node name="small_buildingB2" parent="." instance=ExtResource("42_2h8sd")]
+
+[node name="small_buildingC2" parent="." instance=ExtResource("43_8jl3r")]
+
+[node name="small_buildingD2" parent="." instance=ExtResource("44_ydbrm")]
+
+[node name="small_buildingE2" parent="." instance=ExtResource("45_66aen")]
+
+[node name="small_buildingF2" parent="." instance=ExtResource("46_0mdyw")]
+
+[node name="wall_doorA2" parent="." instance=ExtResource("47_w1y58")]
+
+[node name="wall_doorB2" parent="." instance=ExtResource("48_1eccu")]
+
+[node name="wall_solid2" parent="." instance=ExtResource("49_hj335")]
+
+[node name="wall_windowA2" parent="." instance=ExtResource("50_mn3ra")]
+
+[node name="wall_windowB2" parent="." instance=ExtResource("51_o5rjw")]
+
+[node name="wall_windowC2" parent="." instance=ExtResource("52_sdysc")]
+
+[node name="wall_windowD2" parent="." instance=ExtResource("53_s56my")]
+
+[node name="wall_windowE2" parent="." instance=ExtResource("54_rsv0r")]
+
+[node name="wall_windowF2" parent="." instance=ExtResource("55_50621")]
