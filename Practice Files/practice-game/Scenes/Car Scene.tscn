@@ -475,6 +475,8 @@ points = PackedVector3Array(1.20388, -0.438554, -1.13051, 1.1928, 0.0953528, 2.1
 
 [node name="Player" type="VehicleBody3D"]
 gravity_scale = 4.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0, 0.98)
 script = ExtResource("1_bxkgq")
 
 [node name="Back Left" type="VehicleWheel3D" parent="."]
@@ -486,6 +488,7 @@ suspension_travel = 0.15
 suspension_stiffness = 80.0
 
 [node name="Mesh" type="MeshInstance3D" parent="Back Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00613213, 0)
 mesh = SubResource("ArrayMesh_f868e")
 skeleton = NodePath("")
 
@@ -528,8 +531,10 @@ mesh = SubResource("ArrayMesh_jl3br")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-visible = false
 shape = SubResource("ConvexPolygonShape3D_3mgua")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 1.51808e-08, -8.60946e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 0, 2.20257, -5.75918)
+[node name="Camera Pivot" type="Node3D" parent="."]
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="Camera Pivot"]
+transform = Transform3D(-1, 1.51808e-08, -8.60947e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 0, 2.20257, -5.75918)
