@@ -20,4 +20,16 @@ func make_local(node,parent,node_owner):
 			var duplicate_scene = node.duplicate()
 			duplicate_scene.scene_file_path = ""
 			duplicate_scene.name = "l_" + duplicate_scene.name
-			#3:24
+			
+			parent.add_child(duplicate_scene)
+			duplicate_scene.owner = node_owner
+			
+			print_debug("Found MeshInstance3D " + node.name)
+			duplicate_scene.create_trimesh_collision()
+			parent = duplicate_scene
+		
+		node.get_parent().remove_child(node)
+	
+	for child in node.get_children():
+		make_local(child,parent,node_owner)
+			
