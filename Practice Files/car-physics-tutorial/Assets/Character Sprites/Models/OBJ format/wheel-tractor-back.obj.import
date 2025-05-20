@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dt5ajumlerm28"
+path="res://.godot/imported/wheel-tractor-back.obj-84816f0428942a52d0279a85d68891e6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheel-tractor-back.obj-84816f0428942a52d0279a85d68891e6.mesh"]
+
+source_file="res://Assets/Character Sprites/Models/OBJ format/wheel-tractor-back.obj"
+dest_files=["res://.godot/imported/wheel-tractor-back.obj-84816f0428942a52d0279a85d68891e6.mesh", "res://.godot/imported/wheel-tractor-back.obj-84816f0428942a52d0279a85d68891e6.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
