@@ -15,22 +15,23 @@ var body_tilt = 30
 var speed_input = 0
 var rotate_input = 0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	CarBody.transform.origin - Ball.transform.origin
 	Ball.apply_central_force(-CarBody.global_transform.basis.z * speed_input)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))
 	FRWheel.rotation.y = rotate_input
 	FLWheel.rotation.y = rotate_input
 	
 	if Ball.linear_velocity.length() > 0.75:
-		RotateCar(delta)
+		RotateCar(_delta)
 
 func RotateCar(delta : float) -> void:
 	var new_basis = CarBody.global_transform.basis.rotated(CarBody.global_transform.basis.y, rotate_input)
 	CarBody.global_transform.basis = CarBody.global_transform.basis.slerp(new_basis, turn_speed * delta)
+	CarBody.global_transform = CarBody.global_transform.orthonormalized()
 	var t = -rotate_input * Ball.linear_velocity.length() / body_tilt
 	MeshBody.rotation.z = lerp(MeshBody.rotation.z, t, 10 * delta)

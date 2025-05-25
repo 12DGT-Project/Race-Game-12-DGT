@@ -199,7 +199,7 @@ shape = SubResource("SphereShape3D_vd3mm")
 [node name="Car Body" type="Node3D" parent="."]
 
 [node name="Model" type="Node3D" parent="Car Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
 
 [node name="body" type="MeshInstance3D" parent="Car Body/Model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, -0.025)
@@ -227,5 +227,5 @@ mesh = SubResource("ArrayMesh_gfjmj")
 skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="Car Body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.891, -5)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.841106, 2.64323)
 fov = 80.0

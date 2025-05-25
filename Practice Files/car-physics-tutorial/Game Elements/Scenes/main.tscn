@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://clwlq61dwirn3"]
+
+[ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Game Elements/Scenes/car_body.tscn" id="1_rg0ru"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg0ru"]
+albedo_color = Color(0.0653109, 0.593442, 0.538593, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="Car" parent="." instance=ExtResource("1_rg0ru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42859, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, -6.61257e-08, 0.654121, 0.75639, 5.7185e-08, 0.75639, -0.654121, -2.82213, 8.22151, -60.4099)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.92951, 0)
+use_collision = true
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_rg0ru")
