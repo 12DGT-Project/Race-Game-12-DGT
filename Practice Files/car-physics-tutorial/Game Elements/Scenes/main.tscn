@@ -8,7 +8,7 @@ albedo_color = Color(0.0653109, 0.593442, 0.538593, 1)
 [node name="Main" type="Node3D"]
 
 [node name="Car" parent="." instance=ExtResource("1_rg0ru")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42859, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.70343, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, -6.61257e-08, 0.654121, 0.75639, 5.7185e-08, 0.75639, -0.654121, -2.82213, 8.22151, -60.4099)
