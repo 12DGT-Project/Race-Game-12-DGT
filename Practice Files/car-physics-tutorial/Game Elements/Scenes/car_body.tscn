@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://5unn2y7qly0w"]
+[gd_scene load_steps=19 format=4 uid="uid://5unn2y7qly0w"]
 
 [ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Game Elements/Scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
@@ -184,6 +184,43 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_thl4v")
 
+[sub_resource type="Animation" id="Animation_qs7cx"]
+resource_name = "Hop"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car Body/Model:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.475, 0), Vector3(0, -0.91289, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xdebt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car Body/Model:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfjmj"]
+_data = {
+&"Hop": SubResource("Animation_qs7cx"),
+&"RESET": SubResource("Animation_xdebt")
+}
+
 [node name="Car" type="Node3D"]
 script = ExtResource("1_qs7cx")
 
@@ -229,3 +266,16 @@ skeleton = NodePath("")
 [node name="Camera3D" type="Camera3D" parent="Car Body"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.841106, 2.64323)
 fov = 80.0
+
+[node name="DriftTimer" type="Timer" parent="."]
+
+[node name="BoostTimer" type="Timer" parent="."]
+wait_time = 0.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gfjmj")
+}
+
+[connection signal="timeout" from="DriftTimer" to="." method="_on_drift_timer_timeout"]
+[connection signal="timeout" from="BoostTimer" to="." method="_on_boost_timer_timeout"]
