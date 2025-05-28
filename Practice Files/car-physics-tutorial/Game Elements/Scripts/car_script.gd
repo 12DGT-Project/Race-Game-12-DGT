@@ -22,12 +22,13 @@ var MinimumDrift = false
 var Boost = 1
 var DriftBoost = 1.75
 
-func _physics_process(_delta: float) -> void:
-	CarBody.transform.origin - Ball.transform.origin
+func _physics_process(delta: float) -> void:
+	# Update car body position to match ball position
+	CarBody.global_transform.origin = Ball.global_transform.origin
+	# Apply force in the direction the car is facing
 	Ball.apply_central_force(-CarBody.global_transform.basis.z * speed_input * Boost)
 
-
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))
 	FRWheel.rotation.y = rotate_input
@@ -46,7 +47,7 @@ func _process(_delta: float) -> void:
 		StopDrift()
 	
 	if Ball.linear_velocity.length() > 0.75:
-		RotateCar(_delta)
+		RotateCar(delta)
 
 func RotateCar(delta : float) -> void:
 	var new_basis = CarBody.global_transform.basis.rotated(CarBody.global_transform.basis.y, rotate_input)

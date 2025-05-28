@@ -6,7 +6,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qljlm"]
 bounce = 0.1
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vd3mm"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_qs7cx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ek2pr"]
 resource_name = "colormap"
@@ -189,7 +189,7 @@ resource_name = "Hop"
 length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("Car Body/Model:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -231,7 +231,8 @@ linear_damp = 2.0
 angular_damp = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
-shape = SubResource("SphereShape3D_vd3mm")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48227e-05, -0.075067, -0.00301474)
+shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]
 
@@ -239,7 +240,7 @@ shape = SubResource("SphereShape3D_vd3mm")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
 
 [node name="body" type="MeshInstance3D" parent="Car Body/Model"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, -0.025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00133705, 0.159634, -0.0200085)
 mesh = SubResource("ArrayMesh_qs7cx")
 skeleton = NodePath("")
 
