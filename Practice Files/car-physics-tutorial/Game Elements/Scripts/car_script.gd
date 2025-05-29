@@ -71,7 +71,7 @@ func StopDrift():
 	if MinimumDrift:
 		Boost = DriftBoost
 		boost_timer.start()
-		animation_player.play("Zoom Out")
+	animation_player.play("Zoom Out")
 	Drifting = false
 	MinimumDrift = false
 	
