@@ -7,6 +7,8 @@ extends Node3D
 @onready var MeshBody: MeshInstance3D = $"Car Body/Model/body"
 @onready var drift_timer: Timer = $DriftTimer
 @onready var boost_timer: Timer = $BoostTimer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 var acceleration = 70.0
 var steering = 12.0
@@ -48,6 +50,8 @@ func _process(delta: float) -> void:
 	
 	if Ball.linear_velocity.length() > 0.75:
 		RotateCar(delta)
+	
+
 
 func RotateCar(delta : float) -> void:
 	var new_basis = CarBody.global_transform.basis.rotated(CarBody.global_transform.basis.y, rotate_input)
@@ -58,7 +62,7 @@ func RotateCar(delta : float) -> void:
 
 func StartDrift():
 	Drifting = true
-	#Anim.play("Hop")
+	animation_player.play("Hop")
 	MinimumDrift = false
 	DriftDirection = rotate_input
 	drift_timer.start()
@@ -67,7 +71,7 @@ func StopDrift():
 	if MinimumDrift:
 		Boost = DriftBoost
 		boost_timer.start()
-		# Anim.play("Zoom out")
+		animation_player.play("Zoom Out")
 	Drifting = false
 	MinimumDrift = false
 	
@@ -76,4 +80,5 @@ func _on_drift_timer_timeout() -> void:
 		MinimumDrift = true
 	
 func _on_boost_timer_timeout() -> void:
-	Boost = 1
+	Boost = 1.0
+	animation_player.play("Zoom In")

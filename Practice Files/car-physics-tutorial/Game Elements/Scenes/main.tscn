@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Game Elements/Scenes/car_body.tscn" id="1_rg0ru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg0ru"]
-albedo_color = Color(0.0653109, 0.593442, 0.538593, 1)
+albedo_color = Color(0.909073, 3.94672e-06, 0.56394, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rg0ru"]
 
