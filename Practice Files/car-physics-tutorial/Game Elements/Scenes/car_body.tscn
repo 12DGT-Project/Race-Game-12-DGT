@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://5unn2y7qly0w"]
+[gd_scene load_steps=21 format=4 uid="uid://5unn2y7qly0w"]
 
 [ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Game Elements/Scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
@@ -189,15 +189,15 @@ resource_name = "Hop"
 length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("Car Body/Model:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -0.475, 0), Vector3(0, -0.91289, 0)]
+"values": [Vector3(0, -0.134455, 0), Vector3(0, 0.107586, 0), Vector3(0, -0.257392, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xdebt"]
@@ -212,13 +212,59 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -1, 0)]
+"values": [Vector3(0, -0.134455, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Car Body/Camera3D:fov")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [80.0]
+}
+
+[sub_resource type="Animation" id="Animation_cgajk"]
+resource_name = "Zoom In"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car Body/Camera3D:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [95.0, 80.0]
+}
+
+[sub_resource type="Animation" id="Animation_gfjmj"]
+resource_name = "Zoom Out"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car Body/Camera3D:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [80.0, 95.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gfjmj"]
 _data = {
 &"Hop": SubResource("Animation_qs7cx"),
-&"RESET": SubResource("Animation_xdebt")
+&"RESET": SubResource("Animation_xdebt"),
+&"Zoom In": SubResource("Animation_cgajk"),
+&"Zoom Out": SubResource("Animation_gfjmj")
 }
 
 [node name="Car" type="Node3D"]
@@ -235,9 +281,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48227e-05, -0.075067, -0.00
 shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234295, 0)
 
 [node name="Model" type="Node3D" parent="Car Body"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.134455, 0)
 
 [node name="body" type="MeshInstance3D" parent="Car Body/Model"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00133705, 0.159634, -0.0200085)
@@ -265,7 +312,7 @@ mesh = SubResource("ArrayMesh_gfjmj")
 skeleton = NodePath("")
 
 [node name="Camera3D" type="Camera3D" parent="Car Body"]
-transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0.841106, 2.64323)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 1.58461, 2.64323)
 fov = 80.0
 
 [node name="DriftTimer" type="Timer" parent="."]
