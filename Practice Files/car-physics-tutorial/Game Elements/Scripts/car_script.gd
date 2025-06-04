@@ -9,7 +9,6 @@ extends Node3D
 @onready var boost_timer: Timer = $BoostTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-
 var acceleration = 70.0
 var steering = 12.0
 var turn_speed = 5.0
@@ -24,6 +23,7 @@ var MinimumDrift = false
 var Boost = 1
 var DriftBoost = 1.75
 
+ 
 func _physics_process(_delta: float) -> void:
 	# Update car body position to match ball position
 	CarBody.global_transform.origin = Ball.global_transform.origin
@@ -50,8 +50,6 @@ func _process(delta: float) -> void:
 	
 	if Ball.linear_velocity.length() > 0.75:
 		RotateCar(delta)
-	
-
 
 func RotateCar(delta : float) -> void:
 	var new_basis = CarBody.global_transform.basis.rotated(CarBody.global_transform.basis.y, rotate_input)
@@ -82,3 +80,4 @@ func _on_drift_timer_timeout() -> void:
 func _on_boost_timer_timeout() -> void:
 	Boost = 1.0
 	animation_player.play("Zoom In")
+	MinimumDrift = false
