@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="terraintutorial"
-run/main_scene="uid://dyt4xevpjd6rm"
+run/main_scene="uid://rt6h2frxhsqp"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

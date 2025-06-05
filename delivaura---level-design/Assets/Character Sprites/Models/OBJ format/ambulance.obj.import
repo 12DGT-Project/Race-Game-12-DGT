@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyeq5rlylcyuc"
+path="res://.godot/imported/ambulance.obj-f7d06af1b33aa8a9a7f131719ac351bf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ambulance.obj-f7d06af1b33aa8a9a7f131719ac351bf.mesh"]
+
+source_file="res://Assets/Character Sprites/Models/OBJ format/ambulance.obj"
+dest_files=["res://.godot/imported/ambulance.obj-f7d06af1b33aa8a9a7f131719ac351bf.mesh", "res://.godot/imported/ambulance.obj-f7d06af1b33aa8a9a7f131719ac351bf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

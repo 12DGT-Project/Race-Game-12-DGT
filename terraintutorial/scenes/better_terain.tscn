@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://rt6h2frxhsqp"]
+
+[ext_resource type="MeshLibrary" uid="uid://urjstiecy6gu" path="res://roads.tres" id="1_wii0j"]
+[ext_resource type="PackedScene" uid="uid://bknmth3g6iwoe" path="res://downloads/Untitled.glb" id="2_yvrqc"]
+[ext_resource type="MeshLibrary" uid="uid://btqhc1pu6w4bl" path="res://better buidling.tres" id="3_snb2w"]
+[ext_resource type="MeshLibrary" uid="uid://cxydjlp0lwdri" path="res://blehblehbkeh.tres" id="4_2r1on"]
+[ext_resource type="MeshLibrary" uid="uid://ca2bsyhq6sk43" path="res://TEST.tres" id="5_380si"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wii0j"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_yvrqc"]
+
+[node name="better terain" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+mesh_library = ExtResource("1_wii0j")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 65535, 655366, 1, 65535, 655366, 2, 65535, 655366, 3, 65535, 655366, 4, 65535, 655366, 65535, 65535, 655366, 5, 65535, 655366, 65534, 65535, 655366, 65533, 65535, 655366, 65532, 65535, 655366, 65531, 65535, 655366, 65530, 65535, 655366, 65529, 65535, 655366, 65528, 65535, 655366, 65527, 65535, 655366, 65526, 65535, 655366, 65525, 65535, 655366, 65524, 65535, 655366, 65523, 65535, 655366, 65522, 65535, 655366, 65521, 65535, 655366, 65520, 65535, 655366, 65519, 65535, 655366, 65518, 65535, 655366, 65517, 65535, 655366, 65516, 65535, 655366, 65515, 65535, 655366, 65514, 65535, 655366, 65513, 65535, 655366, 65512, 65535, 655366, 65511, 65535, 655366, 65510, 65535, 655366, 65509, 65535, 655366, 65508, 65535, 655366, 65507, 65535, 655366, 65506, 65535, 655366, 65511, 1, 1179701, 65522, 0, 655413, 65532, 65529, 851972, 65531, 65529, 917508, 65531, 65528, 917508, 65531, 65527, 917508, 65532, 65528, 851972, 65532, 65527, 917508, 65531, 65526, 917508, 65532, 65526, 917508, -5, 65529, 983044, -4, 65529, 786436, -4, 65528, 786436, -5, 65528, 983044, -5, 65527, 196612, 65535, 65533, 1441795, 65532, 65534, 8)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="GridMap2" type="GridMap" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh_library = ExtResource("3_snb2w")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0763399, 3.39454, -1.39205)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_wii0j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("SphereMesh_yvrqc")
+
+[node name="Untitled" parent="." instance=ExtResource("2_yvrqc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43973, 0, 2.56363)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Untitled"]
+transform = Transform3D(1, 0, 0, 0, 0.0116237, 0.999932, 0, -0.999932, 0.0116237, -0.614508, 3.59333, -0.0322378)
+light_color = Color(0.913995, 0.725947, 0.254991, 1)
+light_energy = 16.0
+
+[node name="GridMap3" type="GridMap" parent="."]
+mesh_library = ExtResource("4_2r1on")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65527, 65529, 1179649, 65527, 65530, 1179649, 65527, 65532, 0, 65528, 65532, 0, 65529, 65532, 2, 65525, 65529, 1441793, 65524, 65530, 1310720, 65525, 65530, 1310720, 65524, 65531, 1310720, 65524, 65532, 1310720, 65524, 65533, 1310720, 65524, 65534, 1310720, 65524, 65535, 1310720, 65524, 0, 1310720, 65524, 1, 1310720, 65524, 2, 1310720, 65524, 3, 1310720)
+}
+
+[node name="GridMap4" type="GridMap" parent="."]
+mesh_library = ExtResource("5_380si")
+data = {
+"cells": PackedInt32Array(65532, 65519, 131074, 65535, 65520, 655362)
+}
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.92833, 0.371757, 0, -0.371757, 0.92833, 0, 3.95847, -28.4813)
+light_energy = 16.0
+light_indirect_energy = 0.0
+spot_range = 9.423
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(-0.894687, -0.12808, 0.427937, 0.0482893, 0.924665, 0.377707, -0.444075, 0.358594, -0.821101, 3.90671, 4.88766, -35.6884)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0666745, 0.997775, 0, -0.997775, -0.0666745, -1.50791, 3.59215, -32.9142)
+light_energy = 0.838
