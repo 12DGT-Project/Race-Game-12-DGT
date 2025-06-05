@@ -316,9 +316,11 @@ transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 
 fov = 80.0
 
 [node name="DriftTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="BoostTimer" type="Timer" parent="."]
 wait_time = 0.8
+one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

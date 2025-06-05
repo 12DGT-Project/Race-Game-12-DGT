@@ -1,16 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqgy6noaeful8"]
+[gd_scene load_steps=6 format=3 uid="uid://cqgy6noaeful8"]
 
 [ext_resource type="Script" uid="uid://dv71u73fpwxsl" path="res://Game Elements/Scripts/mainmenu.gd" id="1_yw2ys"]
-[ext_resource type="Texture2D" uid="uid://63hss6j6u6k7" path="res://Assets/city-2178705_1920.jpg" id="2_s4065"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw2ys"]
-bg_color = Color(0.64752, 0.619082, 0, 1)
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[ext_resource type="Texture2D" uid="uid://63hss6j6u6k7" path="res://Assets/Menu Images/city-2178705_1920.jpg" id="2_s4065"]
+[ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets/Styleboxes/regular stylebox.tres" id="3_ghb32"]
+[ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets/Styleboxes/contrasting_style.tres" id="4_f6ug3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4065"]
 bg_color = Color(0.647059, 0.619608, 0, 1)
@@ -29,15 +22,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yw2ys")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background Image" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -383.0
-offset_top = -192.0
-offset_right = 385.0
-offset_bottom = 239.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_s4065")
@@ -63,22 +52,22 @@ theme_override_constants/separation = 15
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_yw2ys")
+theme_override_styles/normal = ExtResource("3_ghb32")
 text = "Start"
 
 [node name="Information" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_yw2ys")
+theme_override_styles/normal = ExtResource("3_ghb32")
 text = "Information"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_yw2ys")
+theme_override_styles/normal = ExtResource("3_ghb32")
 text = "Quit"
 
-[node name="Label" type="Label" parent="."]
+[node name="Game Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -95,11 +84,52 @@ text = "Delivaura"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_right = 557.0
-offset_bottom = 376.0
+[node name="Sprint Information Text" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.0
+offset_top = -240.0
+offset_right = 507.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_s4065")
+text = "Delivaura is a recreational game based around the idea of 
+driving recklessly in search of the famed 
+‘aura points’. These aura points can be obtained throughout the course of the game
+ in the form of aura checkpoints  in which once the user
+ obtains the aura,  they must race through the map to obtain the next aura delivery.
+ If they fail to deliver the aura in time, they will face a terrible fate!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close Information" type="Button" parent="Sprint Information Text"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.5
+offset_top = -99.0
+offset_right = 81.5
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("4_f6ug3")
+text = "Quit:"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Information" to="." method="_on_information_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Sprint Information Text/Close Information" to="." method="_on_close_information_pressed"]

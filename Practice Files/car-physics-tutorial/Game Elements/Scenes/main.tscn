@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://clwlq61dwirn3"]
+[gd_scene load_steps=5 format=3 uid="uid://clwlq61dwirn3"]
 
 [ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Game Elements/Scenes/car_body.tscn" id="1_rg0ru"]
 
@@ -6,6 +6,10 @@
 albedo_color = Color(0.909073, 3.94672e-06, 0.56394, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rg0ru"]
+
+[sub_resource type="Environment" id="Environment_rg0ru"]
+background_mode = 1
+background_color = Color(0.187224, 4.04298e-06, 0.83275, 1)
 
 [node name="Main" type="Node3D"]
 
@@ -24,3 +28,6 @@ material = SubResource("StandardMaterial3D_rg0ru")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299399, 0.0373328, -5.5584)
 mesh = SubResource("CapsuleMesh_rg0ru")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rg0ru")
