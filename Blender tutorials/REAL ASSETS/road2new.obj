@@ -1,6 +1,6 @@
 # Blender 4.4.0
 # www.blender.org
-mtllib road2.mtl
+mtllib road2new.mtl
 o Cube
 v -0.995161 0.096028 0.988960
 v -0.995161 0.203386 0.988960
