@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c45rf1r1tlb6l"]
+
+[ext_resource type="Script" uid="uid://bhfqlislic1r4" path="res://Scripts/basic_checkpoint.gd" id="1_llyax"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_214gi"]
+albedo_color = Color(0.986744, 0.880567, 7.70092e-07, 1)
+metallic = 0.01
+
+[sub_resource type="SphereMesh" id="SphereMesh_214gi"]
+material = SubResource("StandardMaterial3D_214gi")
+radius = 5.0
+height = 10.0
+
+[sub_resource type="Environment" id="Environment_214gi"]
+glow_enabled = true
+glow_intensity = 8.0
+glow_strength = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_214gi"]
+radius = 5.22212
+
+[node name="Basic Checkpoint" type="Node3D"]
+script = ExtResource("1_llyax")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71226, 0)
+mesh = SubResource("SphereMesh_214gi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_214gi")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7292, 0)
+shape = SubResource("SphereShape3D_214gi")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

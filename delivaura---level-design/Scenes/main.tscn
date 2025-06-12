@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clwlq61dwirn3"]
 
-[ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Scenes/Scenes/car_body.tscn" id="1_rg0ru"]
+[ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Scenes/car_body.tscn" id="1_rg0ru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg0ru"]
 albedo_color = Color(0.909073, 3.94672e-06, 0.56394, 1)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bebq6xg7ey506"]
 
-[ext_resource type="Script" uid="uid://f3k63c8l1i33" path="res://scripts/meshlibtool.gd" id="1_brntd"]
+[ext_resource type="Script" uid="uid://f3k63c8l1i33" path="res://Scripts/meshlibtool.gd" id="1_brntd"]
 [ext_resource type="ArrayMesh" uid="uid://cy63rwj41olub" path="res://Assets/Traffic_Light.obj" id="2_o7wew"]
 [ext_resource type="ArrayMesh" uid="uid://dyprmgacbrnka" path="res://Assets/road_crosswalk.obj" id="3_xe63l"]
 [ext_resource type="ArrayMesh" uid="uid://scyctr321vf" path="res://Assets/road3Clear.obj" id="4_wnhuh"]
