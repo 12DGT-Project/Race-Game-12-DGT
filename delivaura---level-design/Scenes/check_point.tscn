@@ -1,13 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcb6q153eqt8f"]
+[gd_scene load_steps=4 format=3 uid="uid://bcb6q153eqt8f"]
 
 [ext_resource type="Script" uid="uid://ct5rtih1tqcil" path="res://Scripts/check_point.gd" id="1_oampm"]
+[ext_resource type="PackedScene" uid="uid://csa2gie5l21jv" path="res://Assets/FBX/Finish.fbx" id="2_mcmgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryujq"]
+size = Vector3(1, 0.6, 0.209)
 
 [node name="CheckPoint" type="Area3D"]
 script = ExtResource("1_oampm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_ryujq")
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
+[node name="Finish" parent="." instance=ExtResource("2_mcmgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

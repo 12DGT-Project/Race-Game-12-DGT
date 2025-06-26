@@ -23,7 +23,9 @@ var MinimumDrift = false
 var Boost = 1
 var DriftBoost = 1.75
 
- 
+func _ready() -> void:
+	add_to_group("Player") 
+
 func _physics_process(_delta: float) -> void:
 	# Update car body position to match ball position
 	CarBody.global_transform.origin = Ball.global_transform.origin
