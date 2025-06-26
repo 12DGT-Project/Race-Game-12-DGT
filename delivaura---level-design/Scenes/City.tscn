@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://d4er37tv7i2sq" path="res://krsstst.tres" id="1_fc2fv"]
 [ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Scenes/car_body.tscn" id="2_skkws"]
-[ext_resource type="PackedScene" uid="uid://c45rf1r1tlb6l" path="res://Scenes/basic_checkpoint.tscn" id="3_j88lv"]
+[ext_resource type="PackedScene" uid="uid://bcb6q153eqt8f" path="res://Scenes/check_point.tscn" id="3_j88lv"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_fc2fv"]
 
@@ -44,8 +44,7 @@ spot_range = 336.051
 spot_attenuation = 0.2
 spot_angle = 56.34
 
-[node name="Basic Checkpoint" parent="." instance=ExtResource("3_j88lv")]
-transform = Transform3D(0.999824, 0, -0.0187437, 0, 1, 0, 0.0187437, 0, 0.999824, -17.9465, 8.61264, -13.434)
-
 [node name="Car" parent="." instance=ExtResource("2_skkws")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67364, 32.1778)
+
+[node name="CheckPoint" parent="." instance=ExtResource("3_j88lv")]
