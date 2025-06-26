@@ -9,8 +9,8 @@ extends Node3D
 @onready var boost_timer: Timer = $BoostTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var acceleration = 70.0
-var steering = 12.0
+var acceleration = 120.0
+var steering = 20.0
 var turn_speed = 5.0
 var body_tilt = 30
 
