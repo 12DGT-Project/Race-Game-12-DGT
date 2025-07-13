@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=4 uid="uid://5unn2y7qly0w"]
 
-[ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Scripts/car_script.gd" id="1_qs7cx"]
+[ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qljlm"]
