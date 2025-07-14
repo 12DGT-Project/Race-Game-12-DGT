@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkpn8agt5ke4o"]
+
+[ext_resource type="Script" uid="uid://dls5f7xohvtql" path="res://Game Elements/Scripts/pause_menu.gd" id="1_es8c2"]
+[ext_resource type="Shader" uid="uid://dl7qwunccj4mx" path="res://Assets (DO NOT MOVE)/Shaders/pause_menu.gdshader" id="2_3mi7p"]
+[ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres" id="2_jvgsy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jvgsy"]
+shader = ExtResource("2_3mi7p")
+shader_parameter/amount = 3.0
+
+[node name="Pause Menu" type="CanvasLayer"]
+script = ExtResource("1_es8c2")
+
+[node name="Blurry BG" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jvgsy")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = -73.0
+offset_right = 77.5
+offset_bottom = 73.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_jvgsy")
+text = "Resume"
+
+[node name="Display Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_jvgsy")
+text = "Display Controls"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_jvgsy")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Display Controls" to="." method="_on_display_controls_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
