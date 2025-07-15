@@ -1,6 +1,6 @@
 # Blender 4.4.0
 # www.blender.org
-mtllib Traffic_Light.mtl
+mtllib Traffic_Light.mtl.mtl
 o Cube
 v 0.107938 2.609299 -0.173398
 v 0.107938 1.737715 -0.173398
