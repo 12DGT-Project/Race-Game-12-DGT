@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcj62r0ur0f8h"
+path="res://.godot/imported/road3 - big 4.obj-2be682ea025a69737a8b1386b2f6ceff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road3 - big 4.obj-2be682ea025a69737a8b1386b2f6ceff.mesh"]
+
+source_file="res://Race-Game-12-DGT/Blender tutorials/REAL ASSETS/road3 - big 4.obj"
+dest_files=["res://.godot/imported/road3 - big 4.obj-2be682ea025a69737a8b1386b2f6ceff.mesh", "res://.godot/imported/road3 - big 4.obj-2be682ea025a69737a8b1386b2f6ceff.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8pudl8sikqqs"
+path="res://.godot/imported/road_crosswalk.obj-fd19fac139b2a6d49b55610a5e9ba9aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_crosswalk.obj-fd19fac139b2a6d49b55610a5e9ba9aa.mesh"]
+
+source_file="res://Race-Game-12-DGT/Blender tutorials/assests/road_crosswalk.obj"
+dest_files=["res://.godot/imported/road_crosswalk.obj-fd19fac139b2a6d49b55610a5e9ba9aa.mesh", "res://.godot/imported/road_crosswalk.obj-fd19fac139b2a6d49b55610a5e9ba9aa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
