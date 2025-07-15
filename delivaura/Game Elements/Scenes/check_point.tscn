@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://csa2gie5l21jv" path="res://Assets (DO NOT MOVE)/FBX/Finish.fbx" id="2_mcmgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryujq"]
-size = Vector3(5.14534, 4.1555, 2.03782)
+size = Vector3(9.07372, 4.1555, 2.03782)
 
 [sub_resource type="Environment" id="Environment_mcmgj"]
 ambient_light_color = Color(0.727785, 0.855819, 1.54018e-06, 1)
@@ -18,7 +18,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_oampm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78097, 2.3694, -5.19285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64887, 2.3694, -5.19285)
 shape = SubResource("BoxShape3D_ryujq")
 
 [node name="Finish" parent="." instance=ExtResource("2_mcmgj")]
