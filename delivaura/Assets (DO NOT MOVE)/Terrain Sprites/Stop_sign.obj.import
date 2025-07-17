@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxyvf13kve7wv"
+path="res://.godot/imported/Stop_sign.obj-c24a7aede8b92a4339e29e888741debf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Stop_sign.obj-c24a7aede8b92a4339e29e888741debf.mesh"]
+
+source_file="res://Assets (DO NOT MOVE)/Terrain Sprites/Stop_sign.obj"
+dest_files=["res://.godot/imported/Stop_sign.obj-c24a7aede8b92a4339e29e888741debf.mesh", "res://.godot/imported/Stop_sign.obj-c24a7aede8b92a4339e29e888741debf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
