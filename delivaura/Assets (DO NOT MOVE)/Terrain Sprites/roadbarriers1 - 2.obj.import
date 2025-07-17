@@ -3,7 +3,11 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
+<<<<<<< HEAD
 uid="uid://b8srjar88k8nv"
+=======
+uid="uid://dhxmmhmh71smu"
+>>>>>>> 5d7f4641dd759443b1faec98ad07b7c65dbb4086
 path="res://.godot/imported/roadbarriers1 - 2.obj-c9f61fa8e5fbe3d0f386f1325e43934f.mesh"
 
 [deps]
