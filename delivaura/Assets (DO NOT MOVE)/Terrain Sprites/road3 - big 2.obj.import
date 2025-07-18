@@ -3,11 +3,7 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
-<<<<<<< HEAD
-uid="uid://c1xbmls64mo4b"
-=======
-uid="uid://bd6vbqttvbus7"
->>>>>>> 5d7f4641dd759443b1faec98ad07b7c65dbb4086
+uid="uid://c8imkeieduxlb"
 path="res://.godot/imported/road3 - big 2.obj-455bb0b6ef57c4049488798be1b258b5.mesh"
 
 [deps]

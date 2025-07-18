@@ -3,11 +3,7 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
-<<<<<<< HEAD
-uid="uid://cxyvf13kve7wv"
-=======
-uid="uid://dnqdlnxiqybhg"
->>>>>>> 5d7f4641dd759443b1faec98ad07b7c65dbb4086
+uid="uid://d2joixedf1yhg"
 path="res://.godot/imported/Stop_sign.obj-c24a7aede8b92a4339e29e888741debf.mesh"
 
 [deps]
