@@ -3,7 +3,11 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
+<<<<<<< HEAD
+uid="uid://q1bquayg5np4"
+=======
 uid="uid://dcgn7me5vtd3i"
+>>>>>>> 5d7f4641dd759443b1faec98ad07b7c65dbb4086
 path="res://.godot/imported/road_crosswalk.obj-1637d37ba9e993362bdd97a8725daede.mesh"
 
 [deps]
