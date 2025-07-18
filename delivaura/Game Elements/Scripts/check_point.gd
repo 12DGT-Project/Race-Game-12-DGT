@@ -24,4 +24,4 @@ func _on_body_exited(_body: Node3D) -> void:
 	var isPlayer = get_tree().get_first_node_in_group("Player")
 	if isPlayer: 
 		print("The Player Has Exited.")
-		global_position = Vector3(92.261, 2.195, 63.176)
+		global_position = Vector3(80.261, 2.195, 57.176)
