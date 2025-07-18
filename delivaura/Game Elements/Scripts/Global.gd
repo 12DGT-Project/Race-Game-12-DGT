@@ -26,4 +26,4 @@ func Initialise_Timer_Bar(TIMER : ProgressBar):
 	TIMER.value = timer_start_value
 
 func _on_aura_point_timer_timeout():
-	pass
+	timer_is_running = false

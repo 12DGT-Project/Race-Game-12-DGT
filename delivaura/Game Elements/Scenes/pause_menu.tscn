@@ -59,6 +59,7 @@ theme_override_styles/normal = ExtResource("2_jvgsy")
 text = "Quit"
 
 [node name="Controls" type="Label" parent="."]
+visible = false
 offset_left = 343.0
 offset_top = 172.0
 offset_right = 817.0
