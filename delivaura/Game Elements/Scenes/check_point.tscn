@@ -1,17 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcb6q153eqt8f"]
+[gd_scene load_steps=6 format=3 uid="uid://bcb6q153eqt8f"]
 
 [ext_resource type="Script" uid="uid://ct5rtih1tqcil" path="res://Game Elements/Scripts/check_point.gd" id="1_oampm"]
 [ext_resource type="PackedScene" uid="uid://csa2gie5l21jv" path="res://Assets (DO NOT MOVE)/FBX/Finish.fbx" id="2_mcmgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryujq"]
 size = Vector3(9.07372, 4.1555, 2.03782)
-
-[sub_resource type="Environment" id="Environment_mcmgj"]
-ambient_light_color = Color(0.727785, 0.855819, 1.54018e-06, 1)
-reflected_light_source = 2
-glow_normalized = true
-volumetric_fog_albedo = Color(1, 1, 0.133333, 1)
-volumetric_fog_emission = Color(0.0880735, 0.0214867, 0.0240305, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rn3ec"]
 albedo_color = Color(1, 1, 0, 1)
@@ -31,9 +24,6 @@ shape = SubResource("BoxShape3D_ryujq")
 
 [node name="Finish" parent="." instance=ExtResource("2_mcmgj")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.0657539)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_mcmgj")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 90.0

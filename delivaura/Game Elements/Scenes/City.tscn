@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cexphxom1mow7"]
+[gd_scene load_steps=13 format=3 uid="uid://cexphxom1mow7"]
 
 [ext_resource type="Script" uid="uid://d138o5qubimyf" path="res://Game Elements/Scenes/city.gd" id="1_epm78"]
 [ext_resource type="MeshLibrary" uid="uid://cdrjffaengxco" path="res://RoadMap2.tres" id="2_kjrj8"]
@@ -6,10 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://cn0kyegd17vhp" path="res://Game Elements/Scenes/player.tscn" id="3_lctyo"]
 [ext_resource type="PackedScene" uid="uid://bkpn8agt5ke4o" path="res://Game Elements/Scenes/pause_menu.tscn" id="5_jav6r"]
 [ext_resource type="PackedScene" uid="uid://uet78lea8e5a" path="res://Game Elements/Scenes/aura_point_menu.tscn" id="6_kjrj8"]
+[ext_resource type="Texture2D" uid="uid://bwe3nw26g2aq1" path="res://Assets (DO NOT MOVE)/panorama_image.png" id="7_g0or0"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_fc2fv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_skkws"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_07d0r"]
+panorama = ExtResource("7_g0or0")
+
+[sub_resource type="Sky" id="Sky_kmkkc"]
+sky_material = SubResource("PanoramaSkyMaterial_07d0r")
+
+[sub_resource type="Environment" id="Environment_c6dx1"]
+background_mode = 2
+sky = SubResource("Sky_kmkkc")
 
 [node name="City" type="Node3D"]
 script = ExtResource("1_epm78")
@@ -34,10 +45,9 @@ data = {
 }
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.7211, 0)
-visible = false
+transform = Transform3D(0.974247, -0.00600325, 0.225403, -0.149823, 0.72983, 0.667009, -0.16851, -0.683602, 0.710136, 0, 31.7211, 0)
 light_color = Color(0.608634, 0.650129, 0.628311, 1)
-light_energy = 16.0
+light_energy = 2.424
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0216229, 0.999766, 0, -0.999766, -0.0216229, 13.5351, 191.443, 20.8844)
@@ -59,3 +69,6 @@ visible = false
 
 [node name="Aura Point Menu" parent="." instance=ExtResource("6_kjrj8")]
 visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c6dx1")
