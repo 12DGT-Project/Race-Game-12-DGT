@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cn0kyegd17vhp" path="res://Game Elements/Scenes/player.tscn" id="3_lctyo"]
 [ext_resource type="PackedScene" uid="uid://bkpn8agt5ke4o" path="res://Game Elements/Scenes/pause_menu.tscn" id="5_jav6r"]
 [ext_resource type="PackedScene" uid="uid://uet78lea8e5a" path="res://Game Elements/Scenes/aura_point_menu.tscn" id="6_kjrj8"]
-[ext_resource type="Texture2D" uid="uid://bwe3nw26g2aq1" path="res://Assets (DO NOT MOVE)/panorama_image.png" id="7_g0or0"]
+[ext_resource type="Texture2D" uid="uid://bj02mt37o17b3" path="res://Assets (DO NOT MOVE)/nightsky.png" id="7_g0or0"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_fc2fv"]
 
