@@ -10,9 +10,11 @@ var total_aura_points : int = 0
 func PauseMenu(MENU):
 	if game_paused:
 		MENU.hide()
+		#get_tree().paused = false
 		Engine.time_scale = 1
 	else:
 		MENU.show()
+		#get_tree().paused = true
 		Engine.time_scale = 0
 		
 	game_paused = !game_paused

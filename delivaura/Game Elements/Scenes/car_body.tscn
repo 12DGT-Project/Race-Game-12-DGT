@@ -282,6 +282,7 @@ shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234295, 0)
+visible = false
 
 [node name="Model" type="Node3D" parent="Car Body"]
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 0, -0.134455, 0)
@@ -325,6 +326,12 @@ one_shot = true
 libraries = {
 &"": SubResource("AnimationLibrary_gfjmj")
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1002.0
+offset_top = 8.0
+offset_right = 1142.0
+offset_bottom = 48.0
 
 [connection signal="timeout" from="DriftTimer" to="." method="_on_drift_timer_timeout"]
 [connection signal="timeout" from="BoostTimer" to="." method="_on_boost_timer_timeout"]
