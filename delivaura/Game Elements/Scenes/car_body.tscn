@@ -282,7 +282,6 @@ shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234295, 0)
-visible = false
 
 [node name="Model" type="Node3D" parent="Car Body"]
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 0, -0.134455, 0)
