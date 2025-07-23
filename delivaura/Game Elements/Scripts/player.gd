@@ -5,6 +5,7 @@ extends Node3D
 @onready var player_coords: Label = $"Player Coordinates"
 @onready var city: Node3D = $".."
 @onready var player: Node3D = $"."
+@onready var car: Node3D = $Car
 
 
 var base_label = "Total Aura Points: %s"
@@ -14,9 +15,7 @@ func _ready():
 	Global.Initialise_Timer_Bar(aura_point_timer_bar)
 
 func _process(_delta):
-	if last_coord != player.global_position:
-		last_coord = player.global_position
-		player_coords.text = str(player.global_position)
+	player_coords.text = str(car.global_position)
 	aura_point_timer_bar.value = Global.aura_point_timer.time_left
 	aura_point_counter.text = base_label % Global.total_aura_points
 	if Global.timer_is_running == false:
