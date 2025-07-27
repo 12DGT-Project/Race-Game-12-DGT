@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqgy6noaeful8"]
+[gd_scene load_steps=7 format=3 uid="uid://cqgy6noaeful8"]
 
 [ext_resource type="Script" uid="uid://dv71u73fpwxsl" path="res://Game Elements/Scripts/mainmenu.gd" id="1_f6ug3"]
 [ext_resource type="Texture2D" uid="uid://63hss6j6u6k7" path="res://Assets (DO NOT MOVE)/Menu Images/city-2178705_1920.jpg" id="2_ia58w"]
 [ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres" id="3_7kr6d"]
 [ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres" id="4_tlhgl"]
+[ext_resource type="AudioStream" uid="uid://bf8cue8q2i03w" path="res://Assets (DO NOT MOVE)/Audio/Delivaura_Menu_Theme.mp3" id="5_ia58w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4065"]
 bg_color = Color(0.647059, 0.619608, 0, 1)
@@ -121,6 +122,9 @@ theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("4_tlhgl")
 text = "Quit:"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ia58w")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Information" to="." method="_on_information_pressed"]
