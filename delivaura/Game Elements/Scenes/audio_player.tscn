@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ud8nh2k6yyv1"]
+
+[ext_resource type="Script" uid="uid://b8ex58k0w4dgx" path="res://Game Elements/Scripts/audio_player.gd" id="1_edmvm"]
+
+[node name="AudioPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_edmvm")
