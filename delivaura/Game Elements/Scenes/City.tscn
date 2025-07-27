@@ -53,7 +53,7 @@ spot_angle = 56.34
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.7102, 2.19548, 63.1765)
 
 [node name="Player" parent="." instance=ExtResource("3_lctyo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.79517, 64.311)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.7293, 2.67956, 64.6854)
 
 [node name="Pause Menu" parent="." instance=ExtResource("5_jav6r")]
 visible = false
