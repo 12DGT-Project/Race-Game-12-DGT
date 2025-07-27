@@ -11,7 +11,7 @@ extends Node3D
 
 
 
-var acceleration = 120.0
+var acceleration = 90.0
 var steering = 20.0
 var turn_speed = 5.0
 var body_tilt = 30
