@@ -277,7 +277,7 @@ linear_damp = 2.0
 angular_damp = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48227e-05, -0.075067, -0.00301474)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 4.48227e-05, -0.075067, -0.00301474)
 shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]

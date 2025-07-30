@@ -3,6 +3,9 @@ extends Area3D
 @onready var aura_point_menu = $"../Aura Point Menu"
 @onready var aura_point_timer_bar = $"../Player/Aura Point Timer Bar"
 @onready var aura_point_counter = $"../Player/Aura Point Counter"
+@onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
+
+var rotation_speed : float = 1.75
 
 func _ready() -> void:
 	add_to_group("CheckPoints")
@@ -25,3 +28,6 @@ func _on_body_exited(_body: Node3D) -> void:
 	if isPlayer: 
 		print("The Player Has Exited.")
 		global_position = Vector3(80.261, 2.195, 57.176)
+
+func _process(delta: float) -> void:
+	mesh_instance_3d.rotate_y(rotation_speed * delta)
