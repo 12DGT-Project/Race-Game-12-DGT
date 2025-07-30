@@ -75,3 +75,30 @@ mesh = SubResource("SphereMesh_g0or0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_07d0r")
+
+[node name="MiniMap" type="CanvasLayer" parent="."]
+scale = Vector2(0.25, 0.25)
+transform = Transform2D(0.25, 0, 0, 0.25, 0, 0)
+
+[node name="PanelContainer" type="PanelContainer" parent="MiniMap"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3308.0
+offset_top = 1452.0
+offset_right = 3820.0
+offset_bottom = 1964.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap/PanelContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="MiniMap/PanelContainer/SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 192.33, 0)
