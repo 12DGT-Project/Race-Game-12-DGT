@@ -9,6 +9,7 @@ func _on_start_aura_challenge_pressed():
 	Global.aura_point_timer.start(Global.timer_start_value)
 	Global.timer_is_running = true
 	aura_point_timer_bar.show()
+	
 
 func _on_info_and_rules_pressed():
 	rules.show()
