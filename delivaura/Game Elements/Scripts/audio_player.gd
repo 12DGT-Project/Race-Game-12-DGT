@@ -13,3 +13,15 @@ func _play_music(music: AudioStream, volume : float = 0.0) -> void:
 
 func _play_music_level():
 	_play_music(main_theme)
+
+func _play_fx(Stream : AudioStream, volume = 0.0):
+	var fx_player = AudioStreamPlayer.new()
+	fx_player.stream = Stream
+	fx_player.name = "FX Player"
+	fx_player.volume_db = volume
+	add_child(fx_player)
+	fx_player.play()
+	
+	await fx_player.finished
+	
+	
