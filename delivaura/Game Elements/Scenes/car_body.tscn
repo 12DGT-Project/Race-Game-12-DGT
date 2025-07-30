@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://5unn2y7qly0w"]
+[gd_scene load_steps=23 format=4 uid="uid://5unn2y7qly0w"]
 
 [ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Game Elements/Scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets (DO NOT MOVE)/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
@@ -184,6 +184,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_thl4v")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtlyc"]
+albedo_color = Color(1, 0.227451, 0.00392157, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_qs7cx"]
+material = SubResource("StandardMaterial3D_wtlyc")
+radius = 5.0
+height = 10.0
+
 [sub_resource type="Animation" id="Animation_qs7cx"]
 resource_name = "Hop"
 length = 0.2
@@ -314,6 +322,10 @@ skeleton = NodePath("")
 [node name="Camera3D" type="Camera3D" parent="Car Body"]
 transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 4.57102, 7.79207)
 fov = 80.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Car Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08415, 20.6178, 0.433051)
+mesh = SubResource("SphereMesh_qs7cx")
 
 [node name="DriftTimer" type="Timer" parent="."]
 one_shot = true

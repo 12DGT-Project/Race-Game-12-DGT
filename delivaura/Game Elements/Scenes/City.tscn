@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cexphxom1mow7"]
+[gd_scene load_steps=14 format=3 uid="uid://cexphxom1mow7"]
 
 [ext_resource type="Script" uid="uid://d138o5qubimyf" path="res://Game Elements/Scenes/city.gd" id="1_epm78"]
 [ext_resource type="MeshLibrary" uid="uid://cdrjffaengxco" path="res://RoadMap2.tres" id="2_kjrj8"]
@@ -22,6 +22,18 @@ ambient_light_energy = 0.51
 [sub_resource type="SphereMesh" id="SphereMesh_g0or0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_07d0r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0or0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
 
 [node name="City" type="Node3D"]
 script = ExtResource("1_epm78")
@@ -77,8 +89,8 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_07d0r")
 
 [node name="MiniMap" type="CanvasLayer" parent="."]
-scale = Vector2(0.25, 0.25)
-transform = Transform2D(0.25, 0, 0, 0.25, 0, 0)
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="PanelContainer" type="PanelContainer" parent="MiniMap"]
 anchors_preset = 8
@@ -86,18 +98,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 3308.0
-offset_top = 1452.0
-offset_right = 3820.0
-offset_bottom = 1964.0
+offset_left = 1184.0
+offset_top = 430.0
+offset_right = 1696.0
+offset_bottom = 942.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g0or0")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap/PanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="SubViewport" type="SubViewport" parent="MiniMap/PanelContainer/SubViewportContainer"]
+transparent_bg = true
 handle_input_locally = false
+size = Vector2i(250, 250)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
