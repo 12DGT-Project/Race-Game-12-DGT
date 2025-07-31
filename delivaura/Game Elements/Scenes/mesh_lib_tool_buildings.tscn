@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://kayh1pyjjkaq"]
+[gd_scene load_steps=3 format=3 uid="uid://cnprwa8n6argn"]
 
 [ext_resource type="Script" uid="uid://f3k63c8l1i33" path="res://Game Elements/Scripts/meshlibtool.gd" id="1_sw3em"]
 [ext_resource type="ArrayMesh" uid="uid://d3enr4ya8c6qp" path="res://Assets (DO NOT MOVE)/Terrain Sprites/Building-1Tall.mtl.obj" id="2_5gemo"]
