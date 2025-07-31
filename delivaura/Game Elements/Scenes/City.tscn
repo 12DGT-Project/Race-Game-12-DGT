@@ -8,6 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://uet78lea8e5a" path="res://Game Elements/Scenes/aura_point_menu.tscn" id="6_kjrj8"]
 [ext_resource type="Texture2D" uid="uid://bj02mt37o17b3" path="res://Assets (DO NOT MOVE)/nightsky.png" id="7_g0or0"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0or0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_07d0r"]
 panorama = ExtResource("7_g0or0")
 
@@ -23,22 +35,10 @@ ambient_light_energy = 0.51
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_07d0r"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0or0"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.8, 0.8, 0, 1)
-corner_radius_top_left = 200
-corner_radius_top_right = 200
-corner_radius_bottom_right = 200
-corner_radius_bottom_left = 200
-
 [node name="City" type="Node3D"]
 script = ExtResource("1_epm78")
 
-[node name="GridMap" type="GridMap" parent="."]
+[node name="World Map" type="GridMap" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh_library = ExtResource("2_g0or0")
 cell_center_y = false
@@ -67,6 +67,47 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.710
 [node name="Player" parent="." instance=ExtResource("3_lctyo")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.7293, 2.67956, 64.6854)
 
+[node name="MiniMap" type="Control" parent="Player"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="Player/MiniMap"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -323.0
+offset_top = -319.0
+offset_right = -23.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g0or0")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Player/MiniMap/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="Player/MiniMap/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Player/MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.45044, 207.716, -4.50195)
+
 [node name="Pause Menu" parent="." instance=ExtResource("5_jav6r")]
 visible = false
 
@@ -87,35 +128,3 @@ mesh = SubResource("SphereMesh_g0or0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("SphereShape3D_07d0r")
-
-[node name="MiniMap" type="CanvasLayer" parent="."]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
-
-[node name="PanelContainer" type="PanelContainer" parent="MiniMap"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 1184.0
-offset_top = 430.0
-offset_right = 1696.0
-offset_bottom = 942.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g0or0")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="SubViewport" type="SubViewport" parent="MiniMap/PanelContainer/SubViewportContainer"]
-transparent_bg = true
-handle_input_locally = false
-size = Vector2i(250, 250)
-render_target_update_mode = 4
-
-[node name="Camera3D" type="Camera3D" parent="MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 192.33, 0)
