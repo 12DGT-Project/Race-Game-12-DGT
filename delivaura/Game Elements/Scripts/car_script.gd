@@ -8,8 +8,8 @@ extends Node3D
 @onready var drift_timer: Timer = $DriftTimer
 @onready var boost_timer: Timer = $BoostTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-
-
+@onready var speed_dial: Sprite2D = $"Speedometer/Speed Dial"
+@onready var needle: Sprite2D = $Speedometer/Needle
 
 var acceleration = 90.0
 var steering = 20.0
@@ -25,8 +25,15 @@ var MinimumDrift = false
 var Boost = 1
 var DriftBoost = 1.75
 
+# Speedometer constants
+const MAX_SPEED = 50.0  # Adjust based on your car's max speed
+const MIN_ANGLE = -150  # Needle position at 0 speed
+const MAX_ANGLE = 150   # Needle position at max speed
+const ROTATION_RANGE = MAX_ANGLE - MIN_ANGLE  # Total needle movement range
+
 func _ready() -> void:
-	add_to_group("Player") 
+	add_to_group("Player")
+	needle.rotation_degrees = MIN_ANGLE  # Initialize at zero position
 
 func _physics_process(_delta: float) -> void:
 	# Update car body position to match ball position
@@ -35,6 +42,7 @@ func _physics_process(_delta: float) -> void:
 	Ball.apply_central_force(-CarBody.global_transform.basis.z * speed_input * Boost)
 
 func _process(delta: float) -> void:
+	global_position.normalized()
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))
 	FRWheel.rotation.y = rotate_input
@@ -54,6 +62,21 @@ func _process(delta: float) -> void:
 	
 	if Ball.linear_velocity.length() > 0.75:
 		RotateCar(delta)
+		
+	_update_speedometer()  # Update the speedometer each frame
+	
+func _update_speedometer():
+	# Get actual speed from ball's linear velocity
+	var current_speed = Ball.linear_velocity.length()
+	
+	# Calculate speed ratio (0.0 to 1.0)
+	var speed_ratio = min(current_speed / MAX_SPEED, 1.0)
+	
+	# Map speed ratio to needle rotation angle
+	var target_angle = MIN_ANGLE + (ROTATION_RANGE * speed_ratio)
+	
+	# Smoothly interpolate needle rotation
+	needle.rotation_degrees = lerp(needle.rotation_degrees, target_angle, 0.1)
 
 func RotateCar(delta : float) -> void:
 	var new_basis = CarBody.global_transform.basis.rotated(CarBody.global_transform.basis.y, rotate_input)
