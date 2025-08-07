@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjh75x04ntv0h"
+path="res://.godot/imported/deliavaura gameplay theme.mp3-8d2279d47824d2ee7b773472c18669fe.mp3str"
+
+[deps]
+
+source_file="res://Assets (DO NOT MOVE)/Audio/deliavaura gameplay theme.mp3"
+dest_files=["res://.godot/imported/deliavaura gameplay theme.mp3-8d2279d47824d2ee7b773472c18669fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

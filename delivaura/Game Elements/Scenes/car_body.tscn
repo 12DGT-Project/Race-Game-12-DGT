@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Game Elements/Scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets (DO NOT MOVE)/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
-[ext_resource type="Texture2D" uid="uid://bfjrnlm1ktebk" path="res://Assets (DO NOT MOVE)/Daco_4301490.png" id="3_gfjmj"]
+[ext_resource type="Texture2D" uid="uid://bfjrnlm1ktebk" path="res://Assets (DO NOT MOVE)/Speedometer Sprites/Daco_4301490.png" id="3_gfjmj"]
 [ext_resource type="Texture2D" uid="uid://oe0iirx1uexx" path="res://Assets (DO NOT MOVE)/Speedometer Sprites/speedometer_needle.png" id="4_cgajk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qljlm"]
@@ -330,6 +330,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08415, 48.4023, 0.433051)
 visible = false
 mesh = SubResource("SphereMesh_qs7cx")
 
+[node name="Speedometer" type="CanvasLayer" parent="Car Body"]
+
+[node name="Speed Dial" type="Sprite2D" parent="Car Body/Speedometer"]
+position = Vector2(162, 501)
+scale = Vector2(0.279375, 0.279375)
+texture = ExtResource("3_gfjmj")
+
+[node name="Needle" type="Sprite2D" parent="Car Body/Speedometer"]
+position = Vector2(163, 513)
+rotation = 6.28319
+scale = Vector2(0.482803, 0.482803)
+texture = ExtResource("4_cgajk")
+
 [node name="DriftTimer" type="Timer" parent="."]
 one_shot = true
 
@@ -346,19 +359,6 @@ offset_left = 1002.0
 offset_top = 8.0
 offset_right = 1142.0
 offset_bottom = 48.0
-
-[node name="Speedometer" type="CanvasLayer" parent="."]
-
-[node name="Speed Dial" type="Sprite2D" parent="Speedometer"]
-position = Vector2(162, 501)
-scale = Vector2(0.279375, 0.279375)
-texture = ExtResource("3_gfjmj")
-
-[node name="Needle" type="Sprite2D" parent="Speedometer"]
-position = Vector2(163, 513)
-rotation = 6.28319
-scale = Vector2(0.482803, 0.482803)
-texture = ExtResource("4_cgajk")
 
 [connection signal="timeout" from="DriftTimer" to="." method="_on_drift_timer_timeout"]
 [connection signal="timeout" from="BoostTimer" to="." method="_on_boost_timer_timeout"]

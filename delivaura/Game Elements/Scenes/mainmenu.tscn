@@ -120,7 +120,7 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = ExtResource("4_tlhgl")
-text = "Quit:"
+text = "Close:"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Information" to="." method="_on_information_pressed"]

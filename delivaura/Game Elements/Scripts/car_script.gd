@@ -8,10 +8,9 @@ extends Node3D
 @onready var drift_timer: Timer = $DriftTimer
 @onready var boost_timer: Timer = $BoostTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var speed_dial: Sprite2D = $"Speedometer/Speed Dial"
-@onready var needle: Sprite2D = $Speedometer/Needle
+@onready var needle: Sprite2D = $"Car Body/Speedometer/Needle"
 
-var acceleration = 90.0
+var acceleration = 100.0
 var steering = 20.0
 var turn_speed = 5.0
 var body_tilt = 30
@@ -23,7 +22,7 @@ var Drifting = false
 var DriftDirection = 0
 var MinimumDrift = false
 var Boost = 1
-var DriftBoost = 1.75
+var DriftBoost = 3
 
 # Speedometer constants
 const MAX_SPEED = 50.0  # Adjust based on your car's max speed

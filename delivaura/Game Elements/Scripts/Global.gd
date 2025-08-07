@@ -6,16 +6,22 @@ var timer_is_running : bool = false
 var game_paused : bool = false
 var total_aura_points : int = 0
 
+func _physics_process(delta):
+	# Guard clause: Skip calculations when paused
+	if delta == 0:
+		return
 
-func PauseMenu(MENU):
+func PauseMenu(MENU : CanvasLayer):
+	MENU.process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	if game_paused:
+		get_tree().paused = false
 		MENU.hide()
-		#get_tree().paused = false
-		Engine.time_scale = 1
+		#Engine.time_scale = 1
 	else:
+		get_tree().paused = true
 		MENU.show()
-		#get_tree().paused = true
-		Engine.time_scale = 0
+		#Engine.time_scale = 0
 		
 	game_paused = !game_paused
 

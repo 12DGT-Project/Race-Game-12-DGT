@@ -1,10 +1,9 @@
 extends CanvasLayer
-@onready var pause_menu = $"."
 @onready var controls: Label = $Controls
 
 
 func _on_resume_pressed():
-	Global.PauseMenu(pause_menu)
+	Global.PauseMenu(self)
 
 func _on_display_controls_pressed():
 	controls.show()
