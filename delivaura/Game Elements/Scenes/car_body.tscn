@@ -338,8 +338,7 @@ scale = Vector2(0.279375, 0.279375)
 texture = ExtResource("3_gfjmj")
 
 [node name="Needle" type="Sprite2D" parent="Car Body/Speedometer"]
-position = Vector2(163, 513)
-rotation = 6.28319
+position = Vector2(162, 501)
 scale = Vector2(0.482803, 0.482803)
 texture = ExtResource("4_cgajk")
 

@@ -1,5 +1,6 @@
 extends CanvasLayer
 @onready var controls: Label = $Controls
+@onready var blurry_bg: ColorRect = $"Blurry BG"
 
 
 func _on_resume_pressed():

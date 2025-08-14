@@ -31,7 +31,7 @@ func _on_body_exited(_body: Node3D) -> void:
 	if isPlayer and Global.timer_is_running == true:
 		var current_position : Vector3 = global_position
 		while global_position == current_position:
-			global_position = checkpoint_pos[randi_range(0, 1)]
+			global_position = checkpoint_pos[randi_range(0, (checkpoint_pos.size() - 1))]
 			pass
 
 func _process(delta: float) -> void:
