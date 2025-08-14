@@ -7,12 +7,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jvgsy"]
 shader = ExtResource("2_3mi7p")
-shader_parameter/amount = 3.0
+shader_parameter/amount = 5.0
 
 [node name="Pause Menu" type="CanvasLayer"]
 script = ExtResource("1_es8c2")
 
 [node name="Blurry BG" type="ColorRect" parent="."]
+z_index = -1
 material = SubResource("ShaderMaterial_jvgsy")
 anchors_preset = 15
 anchor_right = 1.0

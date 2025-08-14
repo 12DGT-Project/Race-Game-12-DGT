@@ -7,7 +7,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2ldkd"]
 shader = ExtResource("2_gvk2t")
-shader_parameter/amount = 3.0
+shader_parameter/amount = 5.0
 
 [node name="Aura Point Menu" type="CanvasLayer"]
 script = ExtResource("1_ao2tm")

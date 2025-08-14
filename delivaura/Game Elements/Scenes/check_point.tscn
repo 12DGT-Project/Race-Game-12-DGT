@@ -37,7 +37,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.06
 wait_time = 90.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.87533, 11.7984, -5.61573)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 10, -3.87533, 11.7984, -5.16763)
 mesh = SubResource("TextMesh_63fp3")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]

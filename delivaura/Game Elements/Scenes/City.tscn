@@ -102,9 +102,11 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.974247, -0.00600305, 0.225403, -0.149823, 0.72983, 0.667009, -0.16851, -0.683602, 0.710136, 0, 38.7211, 0)
-light_color = Color(0.260613, 0.289683, 0.274535, 1)
-light_energy = 0.0
-light_indirect_energy = 0.192
+light_color = Color(0.973882, 0.9473, 0.86824, 1)
+light_energy = 2.909
+light_indirect_energy = 0.292
+light_specular = 0.192
+shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0216229, 0.999766, 0, -0.999766, -0.0216229, 13.5351, 191.443, 20.8844)
