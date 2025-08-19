@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkg0bvwtyw4wy"
+path="res://.godot/imported/Building 4.obj-e29ac30cc6fbb839d762b81c0be53e06.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Building 4.obj-e29ac30cc6fbb839d762b81c0be53e06.mesh"]
+
+source_file="res://Assets (DO NOT MOVE)/Terrain Sprites/Building 4.obj"
+dest_files=["res://.godot/imported/Building 4.obj-e29ac30cc6fbb839d762b81c0be53e06.mesh", "res://.godot/imported/Building 4.obj-e29ac30cc6fbb839d762b81c0be53e06.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
