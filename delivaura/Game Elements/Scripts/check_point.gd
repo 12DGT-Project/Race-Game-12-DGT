@@ -8,7 +8,7 @@ extends Area3D
 
 var rotation_speed : float = 1.75
 
-var checkpoint_pos = [Vector3(80.261, 2.195, 57.176), Vector3(15.71, 2.17, 63.176)]
+var checkpoint_pos = [Vector3(80.261, 2.195, 57.176), Vector3(15.71, 2.17, 65.087)]
 
 func _ready() -> void:
 	add_to_group("CheckPoints")
