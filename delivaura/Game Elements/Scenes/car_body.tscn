@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://5unn2y7qly0w"]
+[gd_scene load_steps=26 format=4 uid="uid://5unn2y7qly0w"]
 
 [ext_resource type="Script" uid="uid://c4xtpg53wh0uf" path="res://Game Elements/Scripts/car_script.gd" id="1_qs7cx"]
 [ext_resource type="Texture2D" uid="uid://bvi8aao307liy" path="res://Assets (DO NOT MOVE)/Character Sprites/Models/GLB format/Textures/colormap.png" id="1_vd3mm"]
@@ -9,6 +9,18 @@
 bounce = 0.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qs7cx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfjmj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ek2pr"]
 resource_name = "colormap"
@@ -292,6 +304,47 @@ shape = SubResource("SphereShape3D_qs7cx")
 
 [node name="Car Body" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.234295, 0)
+
+[node name="MiniMap" type="Control" parent="Car Body"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="Car Body/MiniMap"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -323.0
+offset_top = -319.0
+offset_right = -23.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gfjmj")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Car Body/MiniMap/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="Car Body/MiniMap/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Car Body/MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.111782, 12.6133, 0.502068)
 
 [node name="Model" type="Node3D" parent="Car Body"]
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 0, -0.134455, 0)
