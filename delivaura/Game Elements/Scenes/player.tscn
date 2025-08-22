@@ -1,14 +1,68 @@
-[gd_scene load_steps=5 format=3 uid="uid://cn0kyegd17vhp"]
+[gd_scene load_steps=6 format=3 uid="uid://cn0kyegd17vhp"]
 
 [ext_resource type="Script" uid="uid://788woqhlywmb" path="res://Game Elements/Scripts/player.gd" id="1_n0csv"]
 [ext_resource type="PackedScene" uid="uid://5unn2y7qly0w" path="res://Game Elements/Scenes/car_body.tscn" id="1_v0iea"]
 [ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres" id="3_wtlyc"]
 [ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres" id="4_g8lv5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtlyc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+
 [node name="Player" type="Node3D"]
 script = ExtResource("1_n0csv")
 
 [node name="Car" parent="." instance=ExtResource("1_v0iea")]
+
+[node name="MiniMap" type="Control" parent="Car"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="Car/MiniMap"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -323.0
+offset_top = -319.0
+offset_right = -23.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtlyc")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Car/MiniMap/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="Car/MiniMap/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Car/MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.111782, 20.2471, 0.502068)
+current = true
 
 [node name="Aura Point Timer Bar" type="ProgressBar" parent="."]
 visible = false
