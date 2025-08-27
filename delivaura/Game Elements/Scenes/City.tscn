@@ -19,7 +19,8 @@ sky_material = SubResource("PanoramaSkyMaterial_07d0r")
 [sub_resource type="Environment" id="Environment_c6dx1"]
 background_mode = 2
 sky = SubResource("Sky_kmkkc")
-ambient_light_energy = 0.51
+ambient_light_sky_contribution = 0.33
+ambient_light_energy = 0.34
 
 [sub_resource type="SphereMesh" id="SphereMesh_g0or0"]
 
@@ -62,20 +63,11 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.974247, -0.00600305, 0.225403, -0.149823, 0.72983, 0.667009, -0.16851, -0.683602, 0.710136, 0, 38.7211, 0)
-light_color = Color(0.973882, 0.9473, 0.86824, 1)
+light_color = Color(0.194349, 0.194349, 0.194349, 1)
 light_energy = 2.909
 light_indirect_energy = 0.292
 light_specular = 0.192
 shadow_enabled = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0216229, 0.999766, 0, -0.999766, -0.0216229, 13.5351, 191.443, 20.8844)
-light_energy = 8.602
-light_size = 0.095
-light_specular = 0.22
-spot_range = 336.051
-spot_attenuation = 0.2
-spot_angle = 56.34
 
 [node name="CheckPoint" parent="." instance=ExtResource("3_j88lv")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.71, 2.17, 65.0865)
@@ -160,3 +152,15 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="MiniMap/PanelContainer/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.111782, 334.515, 0.502068)
 current = true
+
+[node name="StaticBody3D6" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(0.345493, 0, -4.09398, 0, 6.29539, 0, 3.55879, 0, 0.397451, 55.7557, 2.31961, 39.1464)
+
+[node name="StaticBody3D7" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-3.55696, 0, -0.418596, 0, 6.29539, 0, 0.363874, 0, -4.09188, 3.5603, 2.03681, -56.4406)
+
+[node name="StaticBody3D8" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 143.446, -3.95408, -28.1221)
+
+[node name="StaticBody3D9" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 141.463, 0.402004, 60.5339)
