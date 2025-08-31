@@ -97,7 +97,7 @@ shape = SubResource("SphereShape3D_07d0r")
 transform = Transform3D(-2.90125, 0, -2.40403, 0, 6.29539, 0, 2.08975, 0, -3.33756, 7.63107, -0.0796604, 87.8437)
 
 [node name="StaticBody3D" parent="." instance=ExtResource("9_kmkkc")]
-transform = Transform3D(-1.66448, 0, 3.64036, 0, 6.29539, 0, -3.16446, 0, -1.9148, 58.1017, 1.94551, 93.924)
+transform = Transform3D(1.29346, 0, 3.83466, 0, 6.29539, 0, -3.33336, 0, 1.48798, 58.1017, 1.94551, 93.924)
 
 [node name="StaticBody3D2" parent="." instance=ExtResource("9_kmkkc")]
 transform = Transform3D(2.23727, 0, 3.20852, 0, 6.29539, 0, -2.78907, 0, 2.57373, 133.38, 1.98836, 158.804)
@@ -154,7 +154,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.111
 current = true
 
 [node name="StaticBody3D6" parent="." instance=ExtResource("9_kmkkc")]
-transform = Transform3D(0.345493, 0, -4.09398, 0, 6.29539, 0, 3.55879, 0, 0.397451, 55.7557, 2.31961, 39.1464)
+transform = Transform3D(1.71256, 0, -3.61072, 0, 6.29539, 0, 3.13871, 0, 1.9701, 55.7557, 2.31961, 3.65127)
 
 [node name="StaticBody3D7" parent="." instance=ExtResource("9_kmkkc")]
 transform = Transform3D(-3.55696, 0, -0.418596, 0, 6.29539, 0, 0.363874, 0, -4.09188, 3.5603, 2.03681, -56.4406)
@@ -163,4 +163,49 @@ transform = Transform3D(-3.55696, 0, -0.418596, 0, 6.29539, 0, 0.363874, 0, -4.0
 transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 143.446, -3.95408, -28.1221)
 
 [node name="StaticBody3D9" parent="." instance=ExtResource("9_kmkkc")]
-transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 141.463, 0.402004, 60.5339)
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, -52.8448, 0.402004, 33.6874)
+
+[node name="StaticBody3D10" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-3.07785, 0, -2.09331, 0, 6.29539, 0, 1.81966, 0, -3.54072, -83.3021, 2.14059, -8.75571)
+
+[node name="StaticBody3D11" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 158.796, 1.59156, 91.5267)
+
+[node name="StaticBody3D12" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-2.66297, 0, 2.74481, 0, 6.29539, 0, -2.38599, 0, -3.06344, 42.726, -0.183895, -109.707)
+
+[node name="StaticBody3D13" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.1203, 0, 2.00843, 0, 6.29539, 0, -1.74588, 0, 3.58955, 83.6264, 1.31534, -175.11)
+
+[node name="StaticBody3D14" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, 143.934, 1.76081, -117.154)
+
+[node name="StaticBody3D15" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-1.76556, 0, -3.57679, 0, 6.29539, 0, 3.1092, 0, -2.03107, -6.89676, 1.24704, -112.277)
+
+[node name="StaticBody3D16" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.37458, 0, -1.35948, 0, 6.29539, 0, 1.18176, 0, 3.88207, -8.78527, -0.567104, -75.1795)
+
+[node name="StaticBody3D17" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(1.01179, 0, 3.94511, 0, 6.29539, 0, -3.42938, 0, 1.16395, -39.7837, -0.54788, 81.7924)
+
+[node name="StaticBody3D18" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-2.85824, 0, -2.47127, 0, 6.29539, 0, 2.14821, 0, -3.28808, -92.7113, -2.21882, -166.5)
+
+[node name="StaticBody3D19" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.57552, 0, 0, 0, 6.29539, 0, 0, 0, 4.11323, -116.186, -0.0371075, -120.084)
+
+[node name="StaticBody3D20" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-2.72156, 0, -2.66767, 0, 6.29539, 0, 2.31893, 0, -3.13085, -147.108, 2.4449, -31.7704)
+
+[node name="StaticBody3D21" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(2.74657, 0, -2.63353, 0, 6.29539, 0, 2.28925, 0, 3.15962, -145.226, 0.550755, 9.94062)
+
+[node name="StaticBody3D22" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(1.54268, 0, 3.71068, 0, 6.29539, 0, -3.2256, 0, 1.77468, -146.524, 2.5545, 34.6466)
+
+[node name="StaticBody3D23" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(-2.9161, 0, -2.38014, 0, 6.29539, 0, 2.06899, 0, -3.35464, -145.832, -1.66417, 163.935)
+
+[node name="StaticBody3D24" parent="." instance=ExtResource("9_kmkkc")]
+transform = Transform3D(3.42876, 0, -1.16636, 0, 6.29539, 0, 1.01389, 0, 3.9444, 158.975, 0.224423, -177.821)
