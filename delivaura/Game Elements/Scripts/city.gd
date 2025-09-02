@@ -1,5 +1,6 @@
 extends Node3D
 @onready var pause_menu = $"Pause Menu"
+@onready var player: Node3D = $Player
 
 
 #func _ready() -> void:

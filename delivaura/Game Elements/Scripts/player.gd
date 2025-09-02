@@ -16,7 +16,7 @@ func _ready():
 	Global.Initialise_Timer_Bar(aura_point_timer_bar)
 
 func _process(_delta):
-	player_coords.text = str(car.global_position)
+	#player_coords.text = str(car.global_position)
 	aura_point_timer_bar.value = Global.aura_point_timer.time_left
 	aura_point_counter.text = base_label % Global.total_aura_points
 	if Global.timer_is_running == false:
