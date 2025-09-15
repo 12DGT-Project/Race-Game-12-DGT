@@ -43,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 
 func _process(delta: float) -> void:
 	global_position.normalized()
-	camera_3d.global_position = Vector3(global_position.x, 75, global_position.z)
+	camera_3d.global_position = Vector3(Ball.global_position.x, 75, Ball.global_position.z)
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))
 	FRWheel.rotation.y = rotate_input
