@@ -357,7 +357,7 @@ texture = ExtResource("4_cgajk")
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Car Body"]
 transform = Transform3D(1, 0, 0, 0, 0.986856, 0.161604, 0, -0.161604, 0.986856, -1.0132, 1.51579, -2.8954)
-light_energy = 45.0
+light_energy = 55.0
 light_indirect_energy = 0.93
 light_volumetric_fog_energy = 3.424
 light_specular = 0.0
@@ -370,7 +370,7 @@ spot_angle = 35.2573
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Car Body"]
 transform = Transform3D(1, 0, 0, 0, 0.986731, 0.162362, 0, -0.162362, 0.986731, 1.03965, 1.50198, -2.92226)
-light_energy = 45.0
+light_energy = 55.0
 light_indirect_energy = 0.93
 light_volumetric_fog_energy = 3.424
 distance_fade_enabled = true
