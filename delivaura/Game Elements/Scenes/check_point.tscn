@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcb6q153eqt8f"]
+[gd_scene load_steps=9 format=3 uid="uid://bcb6q153eqt8f"]
 
 [ext_resource type="Script" uid="uid://ct5rtih1tqcil" path="res://Game Elements/Scripts/check_point.gd" id="1_oampm"]
+[ext_resource type="ArrayMesh" uid="uid://wu6pvmng780s" path="res://Assets (DO NOT MOVE)/Parcels/Parcel.obj" id="2_63fp3"]
 [ext_resource type="PackedScene" uid="uid://csa2gie5l21jv" path="res://Assets (DO NOT MOVE)/FBX/Finish.fbx" id="2_mcmgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryujq"]
-size = Vector3(9.07372, 4.1555, 2.03782)
+size = Vector3(3.4563, 4.1555, 3.64072)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rn3ec"]
 albedo_color = Color(1, 1, 0, 1)
@@ -27,17 +28,23 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 script = ExtResource("1_oampm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64887, 2.3694, -5.19285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335873, 2.3694, -0.0989863)
 shape = SubResource("BoxShape3D_ryujq")
+
+[node name="ParcelSprite" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.0657539)
+mesh = ExtResource("2_63fp3")
+skeleton = NodePath("../Finish")
 
 [node name="Finish" parent="." instance=ExtResource("2_mcmgj")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.0657539)
+visible = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 90.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 10, -3.87533, 11.7984, -5.16763)
+[node name="Checkpoint Label" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 10, -0.457677, 11.5678, 0.522976)
 mesh = SubResource("TextMesh_63fp3")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]

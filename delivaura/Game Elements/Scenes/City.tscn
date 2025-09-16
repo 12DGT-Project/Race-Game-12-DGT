@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cexphxom1mow7"]
+[gd_scene load_steps=17 format=3 uid="uid://cexphxom1mow7"]
 
 [ext_resource type="Script" uid="uid://d138o5qubimyf" path="res://Game Elements/Scripts/city.gd" id="1_epm78"]
 [ext_resource type="MeshLibrary" uid="uid://duoagilysu0kb" path="res://roadmapofficial.tres" id="2_g0or0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://uet78lea8e5a" path="res://Game Elements/Scenes/aura_point_menu.tscn" id="6_kjrj8"]
 [ext_resource type="Texture2D" uid="uid://bj02mt37o17b3" path="res://Assets (DO NOT MOVE)/nightsky.png" id="7_g0or0"]
 [ext_resource type="PackedScene" uid="uid://83jwd3uxcpk6" path="res://Game Elements/Scenes/lamp.tscn" id="9_kmkkc"]
+[ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres" id="10_c6dx1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_07d0r"]
 panorama = ExtResource("7_g0or0")
@@ -22,6 +23,14 @@ sky = SubResource("Sky_kmkkc")
 ambient_light_source = 3
 ambient_light_sky_contribution = 0.17
 ambient_light_energy = 0.17
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmkkc"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_g0or0"]
 
@@ -59,7 +68,7 @@ light_specular = 0.192
 shadow_enabled = true
 
 [node name="CheckPoint" parent="." instance=ExtResource("3_j88lv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.71, 2.17, 65.0865)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.078, 2.17, 10.5787)
 
 [node name="Pause Menu" parent="." instance=ExtResource("5_jav6r")]
 visible = false
@@ -69,6 +78,68 @@ visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_c6dx1")
+
+[node name="Main Map" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="Main Map"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -830.0
+offset_top = -560.0
+offset_right = -356.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kmkkc")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Main Map/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="Main Map/PanelContainer/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(400, 400)
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="Main Map/PanelContainer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.112, 409.177, 0.502)
+doppler_tracking = 2
+current = true
+
+[node name="Close Map" type="Button" parent="Main Map"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -615.0
+offset_top = -128.0
+offset_right = -529.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("10_c6dx1")
+text = "Close:"
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 5, 48.7165)
@@ -156,3 +227,5 @@ transform = Transform3D(-2.9161, 0, -2.38014, 0, 6.29539, 0, 2.06899, 0, -3.3546
 
 [node name="StaticBody3D24" parent="." instance=ExtResource("9_kmkkc")]
 transform = Transform3D(3.42876, 0, -1.16636, 0, 6.29539, 0, 1.01389, 0, 3.9444, 158.975, 0.224423, -177.821)
+
+[connection signal="pressed" from="Main Map/Close Map" to="Pause Menu" method="_on_close_map_pressed"]

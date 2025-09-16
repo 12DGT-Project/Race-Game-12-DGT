@@ -52,6 +52,13 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = ExtResource("2_jvgsy")
 text = "Display Controls"
 
+[node name="Display Map" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_jvgsy")
+text = "Display Map"
+
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -115,5 +122,6 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Display Controls" to="." method="_on_display_controls_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Display Map" to="." method="_on_display_map_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Controls/Close Controls" to="." method="_on_close_controls_pressed"]

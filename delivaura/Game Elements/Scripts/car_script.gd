@@ -11,7 +11,7 @@ extends Node3D
 @onready var needle: Sprite2D = $"Car Body/Speedometer/Needle"
 @onready var camera_3d: Camera3D = $MiniMap/PanelContainer/SubViewportContainer/SubViewport/Camera3D
 
-var acceleration = 90.0
+var acceleration = 100.0
 var steering = 20.0
 var turn_speed = 5.0
 var body_tilt = 30

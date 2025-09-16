@@ -3,12 +3,22 @@ extends Area3D
 @onready var aura_point_menu = $"../Aura Point Menu"
 @onready var aura_point_timer_bar = $"../Player/Aura Point Timer Bar"
 @onready var aura_point_counter = $"../Player/Aura Point Counter"
-@onready var mesh_instance_3d: MeshInstance3D = $MeshInstance3D
+@onready var checkpoint_label: MeshInstance3D = $"Checkpoint Label"
+@onready var parcel_sprite: MeshInstance3D = $ParcelSprite
 
 
 var rotation_speed : float = 1.75
+const CHECKPOINT_HEIGHT = 2.17
 
-var checkpoint_pos = [Vector3(80.261, 2.195, 57.176), Vector3(15.71, 2.17, 65.087)]
+var checkpoint_pos = [
+	Vector3(71.29, CHECKPOINT_HEIGHT, 74.09), 
+	Vector3(15.71, CHECKPOINT_HEIGHT, 74.09),
+	Vector3(70.547, CHECKPOINT_HEIGHT, 131.001),
+	Vector3(130.23, CHECKPOINT_HEIGHT, -9.832),
+	Vector3(100.1, CHECKPOINT_HEIGHT, -30.394),
+	Vector3(-70.618, CHECKPOINT_HEIGHT, -158.454),
+	Vector3(-70.078, CHECKPOINT_HEIGHT, 10.579)
+	]
 
 func _ready() -> void:
 	add_to_group("CheckPoints")
@@ -35,4 +45,5 @@ func _on_body_exited(_body: Node3D) -> void:
 			pass
 
 func _process(delta: float) -> void:
-	mesh_instance_3d.rotate_y(rotation_speed * delta)
+	checkpoint_label.rotate_y(rotation_speed * delta)
+	parcel_sprite.rotate_y(rotation_speed * delta)
