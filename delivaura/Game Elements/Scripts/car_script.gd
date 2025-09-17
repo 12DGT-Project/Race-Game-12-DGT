@@ -10,6 +10,10 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var needle: Sprite2D = $"Car Body/Speedometer/Needle"
 @onready var camera_3d: Camera3D = $MiniMap/PanelContainer/SubViewportContainer/SubViewport/Camera3D
+@onready var player_coords: Label = $"Player Coordinates"
+
+
+var last_coord = Vector3.ZERO
 
 var acceleration = 100.0
 var steering = 20.0
@@ -43,6 +47,7 @@ func _physics_process(_delta: float) -> void:
 
 func _process(delta: float) -> void:
 	global_position.normalized()
+	player_coords.text = str(Ball.global_position)
 	camera_3d.global_position = Vector3(Ball.global_position.x, 75, Ball.global_position.z)
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))

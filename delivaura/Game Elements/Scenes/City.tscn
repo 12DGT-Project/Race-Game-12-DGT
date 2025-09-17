@@ -37,6 +37,7 @@ border_color = Color(0.8, 0.8, 0, 1)
 [sub_resource type="SphereShape3D" id="SphereShape3D_07d0r"]
 
 [node name="City" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -111.081)
 script = ExtResource("1_epm78")
 
 [node name="Player" parent="." instance=ExtResource("3_lctyo")]
@@ -68,7 +69,7 @@ light_specular = 0.192
 shadow_enabled = true
 
 [node name="CheckPoint" parent="." instance=ExtResource("3_j88lv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.078, 2.17, 10.5787)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -70.078, 2.17, 108.977)
 
 [node name="Pause Menu" parent="." instance=ExtResource("5_jav6r")]
 visible = false
