@@ -11,9 +11,10 @@ func _physics_process(delta):
 	if delta == 0:
 		return
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if total_aura_points >= 100:
 		get_tree().change_scene_to_file("res://Game Elements/Scenes/end_game_menu.tscn")
+		get_tree().paused = false
 
 func PauseMenu(MENU : CanvasLayer):
 	MENU.process_mode = Node.PROCESS_MODE_ALWAYS

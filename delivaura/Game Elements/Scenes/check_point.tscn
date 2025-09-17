@@ -59,8 +59,8 @@ light_energy = 44.155
 light_indirect_energy = 1.132
 light_volumetric_fog_energy = 0.0
 light_size = 0.061
-spot_range = 329.234
-spot_attenuation = -1.19
+spot_range = 329.299
+spot_attenuation = -0.54
 spot_angle = 21.0888
 spot_angle_attenuation = 0.25
 

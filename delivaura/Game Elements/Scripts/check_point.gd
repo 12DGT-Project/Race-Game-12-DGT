@@ -29,7 +29,7 @@ func _ready() -> void:
 func _on_body_entered(_body: Node3D) -> void:
 	var isPlayer = get_tree().get_first_node_in_group("Player")
 	if isPlayer:
-		if Global.timer_is_running == false: 
+		if Global.timer_is_running == false and Global.total_aura_points < 100: 
 			print("The Player Has Entered.")
 			Global.PauseMenu(aura_point_menu)
 		else:

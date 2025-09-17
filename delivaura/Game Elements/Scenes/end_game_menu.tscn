@@ -18,7 +18,7 @@ offset_bottom = 101.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "Thanks For Playing!!!"
+text = "Thanks For Playing Delivaura!!!"
 horizontal_alignment = 1
 
 [node name="BG" type="ColorRect" parent="."]
@@ -52,14 +52,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = ExtResource("3_5gxdn")
-text = "Resume"
+text = "Play Again"
 
 [node name="Display Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = ExtResource("3_5gxdn")
-text = "Display Map"
+text = "Credits"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -70,22 +70,22 @@ text = "Quit"
 
 [node name="Credits" type="Label" parent="."]
 visible = false
-offset_left = 343.0
-offset_top = 172.0
-offset_right = 817.0
-offset_bottom = 510.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("3_5gxdn")
+offset_left = 179.0
+offset_top = 117.0
+offset_right = 1014.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("4_u3cce")
 text = "
 
-
-Esc = Head to side Menu
-W or Up arrow = Accelerate Forwards
-S or Down arrow = Accelerates Backwards
-A or Left arrow = Gradual left turn
-D or Right arrow = Gradual right turn
-Shift or Space Bar= Drift"
+Sound Design and Project Management - 
+Joshua Mariano
+Artwork - 
+Kris Zhang
+Programming and Coding -
+Ciaran Monteith
+"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="Credits"]
@@ -93,14 +93,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -140.0
-offset_top = 13.0
-offset_right = 144.0
-offset_bottom = 82.0
+offset_left = -137.5
+offset_top = 18.0
+offset_right = 146.5
+offset_bottom = 87.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("3_5gxdn")
+theme_override_styles/normal = ExtResource("4_u3cce")
 text = "Credits:"
 horizontal_alignment = 1
 
@@ -111,15 +111,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -43.0
-offset_top = -64.0
-offset_right = 43.0
-offset_bottom = -22.0
+offset_left = -42.5
+offset_top = -54.0
+offset_right = 43.5
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("4_u3cce")
+theme_override_styles/normal = ExtResource("3_5gxdn")
 text = "Close:"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Restart Game" to="." method="_on_restart_game_pressed"]

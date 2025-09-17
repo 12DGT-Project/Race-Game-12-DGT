@@ -3,7 +3,8 @@ extends CanvasLayer
 
 
 func _on_restart_game_pressed() -> void:
-	get_tree().reload_current_scene()
+	Global.total_aura_points = 0
+	get_tree().change_scene_to_file("res://Game Elements/Scenes/mainmenu.tscn")
 
 func _on_display_credits_pressed() -> void:
 	credits.show()
