@@ -1,15 +1,19 @@
 extends Node
 
 var aura_point_timer : Timer = Timer.new()
-var timer_start_value : int = 90
+var timer_start_value : int = 100
 var timer_is_running : bool = false
 var game_paused : bool = false
-var total_aura_points : int = 0
+var total_aura_points : int = 90
 
 func _physics_process(delta):
 	# Guard clause: Skip calculations when paused
 	if delta == 0:
 		return
+
+func _process(delta: float) -> void:
+	if total_aura_points >= 100:
+		get_tree().change_scene_to_file("res://Game Elements/Scenes/end_game_menu.tscn")
 
 func PauseMenu(MENU : CanvasLayer):
 	MENU.process_mode = Node.PROCESS_MODE_ALWAYS

@@ -69,7 +69,7 @@ light_specular = 0.192
 shadow_enabled = true
 
 [node name="CheckPoint" parent="." instance=ExtResource("3_j88lv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 67.6476, 2.17, -128.332)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.5634, 2.17, 69.9276)
 
 [node name="Pause Menu" parent="." instance=ExtResource("5_jav6r")]
 visible = false
