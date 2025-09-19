@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwengrhkemw87"]
 
-[ext_resource type="Script" path="res://Game Elements/Scripts/end_game_menu.gd" id="1_hj4g5"]
+[ext_resource type="Script" uid="uid://cugwfu6m427c4" path="res://Game Elements/Scripts/end_game_menu.gd" id="1_hj4g5"]
 [ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres" id="3_5gxdn"]
 [ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres" id="4_u3cce"]
 

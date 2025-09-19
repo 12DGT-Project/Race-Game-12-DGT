@@ -10,10 +10,12 @@ extends Node3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var needle: Sprite2D = $"Car Body/Speedometer/Needle"
 @onready var camera_3d: Camera3D = $MiniMap/PanelContainer/SubViewportContainer/SubViewport/Camera3D
-@onready var mini_map_icon = $"MiniMap Icon"
+@onready var player_coords: Label = $"Player Coordinates"
 
 
-var acceleration = 90.0
+var last_coord = Vector3.ZERO
+
+var acceleration = 100.0
 var steering = 20.0
 var turn_speed = 5.0
 var body_tilt = 30
@@ -38,8 +40,6 @@ func _ready() -> void:
 	needle.rotation_degrees = MIN_ANGLE  # Initialize at zero position
 
 func _physics_process(_delta: float) -> void:
-	camera_3d.global_position = Vector3(Ball.global_position.x, 100, Ball.global_position.z)
-	mini_map_icon.global_position = Vector3(Ball.global_position.x, 50, Ball.global_position.z)
 	# Update car body position to match ball position
 	CarBody.global_transform.origin = Ball.global_transform.origin
 	# Apply force in the direction the car is facing
@@ -47,6 +47,8 @@ func _physics_process(_delta: float) -> void:
 
 func _process(delta: float) -> void:
 	global_position.normalized()
+	player_coords.text = str(Ball.global_position)
+	camera_3d.global_position = Vector3(Ball.global_position.x, 75, Ball.global_position.z)
 	speed_input = (Input.get_action_strength("Accelerate") - Input.get_action_strength("Brake")) * acceleration
 	rotate_input = deg_to_rad(steering) * (Input.get_action_strength("SteerLeft") - Input.get_action_strength("SteerRight"))
 	FRWheel.rotation.y = rotate_input
