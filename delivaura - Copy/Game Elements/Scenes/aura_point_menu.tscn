@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=3 uid="uid://uet78lea8e5a"]
+
+[ext_resource type="Script" uid="uid://c35dpktkg7ppb" path="res://Game Elements/Scripts/aura_point_menu.gd" id="1_ao2tm"]
+[ext_resource type="Shader" uid="uid://dl7qwunccj4mx" path="res://Assets (DO NOT MOVE)/Shaders/pause_menu.gdshader" id="2_gvk2t"]
+[ext_resource type="StyleBox" uid="uid://2rbhu5dftuu0" path="res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres" id="3_2ldkd"]
+[ext_resource type="StyleBox" uid="uid://chtyn1dkush8r" path="res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres" id="4_jixw5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ldkd"]
+shader = ExtResource("2_gvk2t")
+shader_parameter/amount = 5.0
+
+[node name="Aura Point Menu" type="CanvasLayer"]
+script = ExtResource("1_ao2tm")
+
+[node name="Blurry BG" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2ldkd")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = -86.5
+offset_right = 204.0
+offset_bottom = 86.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Start Aura Challenge" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_2ldkd")
+text = "Accept Delivery:"
+
+[node name="Info and Rules" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_2ldkd")
+text = "Rules:"
+
+[node name="Cancel Challenge" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_2ldkd")
+text = "Cancel and Return:"
+
+[node name="Rules" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -406.0
+offset_top = -203.0
+offset_right = 394.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_2ldkd")
+text = "
+
+
+1. Deliveries must be made within 
+90 seconds (1.5 minutes) of accepting.
+2. You must take a legal and proper
+route to the end checkpoint through 
+the city (no cheating :) ).
+3. The end checkpoint will be displayed
+ on your minimap, but no route will be identified.
+Enjoy!!!"
+horizontal_alignment = 1
+
+[node name="Close Rules" type="Button" parent="Rules"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -64.0
+offset_right = 43.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.647059, 0.619608, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("4_jixw5")
+text = "Close:"
+
+[node name="Label" type="Label" parent="Rules"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -346.0
+offset_top = 20.0
+offset_right = 349.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_2ldkd")
+text = "Rules of the Delivery Service:"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start Aura Challenge" to="." method="_on_start_aura_challenge_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Info and Rules" to="." method="_on_info_and_rules_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Cancel Challenge" to="." method="_on_cancel_challenge_pressed"]
+[connection signal="pressed" from="Rules/Close Rules" to="." method="_on_close_rules_pressed"]

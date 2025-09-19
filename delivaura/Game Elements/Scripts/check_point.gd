@@ -12,6 +12,21 @@ var ground_height_y : float = 2.17
 var checkpoint_normal = [Vector3(15.71, ground_height_y, 65.087)]
 var checkpoint_rotate = [Vector3(80.261, ground_height_y, 57.176)] 
 
+<<<<<<< Updated upstream
+=======
+var checkpoint_pos = [
+	Vector3(71.29, CHECKPOINT_HEIGHT, 74.09), 
+	Vector3(15.71, CHECKPOINT_HEIGHT, 74.09),
+	Vector3(70.547, CHECKPOINT_HEIGHT, 101.001),
+	Vector3(130.23, CHECKPOINT_HEIGHT, -9.832),
+	Vector3(100.1, CHECKPOINT_HEIGHT, -10.394),
+	Vector3(-70.618, CHECKPOINT_HEIGHT, -158.454),
+	Vector3(-70.078, CHECKPOINT_HEIGHT, 10.579),
+	Vector3(-100.944, CHECKPOINT_HEIGHT, 100.472),
+	Vector3(90.712, CHECKPOINT_HEIGHT, 100.685),
+	Vector3(67.648, CHECKPOINT_HEIGHT, -128.332)
+	]
+>>>>>>> Stashed changes
 
 func _ready() -> void:
 	add_to_group("CheckPoints")
