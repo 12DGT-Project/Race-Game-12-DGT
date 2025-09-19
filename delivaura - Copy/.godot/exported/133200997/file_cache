@@ -1,0 +1,19 @@
+res://Assets (DO NOT MOVE)/Styleboxes/contrasting_style.tres::6f7ecaf8b6d9870f25810bb90d83ca52::1752562030::res://.godot/exported/133200997/export-171076f5978ddcb8de5020d293b28a4e-contrasting_style.res
+res://Assets (DO NOT MOVE)/Styleboxes/regular stylebox.tres::d44b745fbbdd890863017b7a9f8ba668::1752562030::res://.godot/exported/133200997/export-dbc5a900a968dc32ca45a25201659a39-regular stylebox.res
+res://Game Elements/Scenes/aura_point_menu.tscn::215f157dfb2037d046e947199c9f670a::1755901054::res://.godot/exported/133200997/export-fd772dc204d8729e972cc45813c636a3-aura_point_menu.scn
+res://Game Elements/Scenes/car_body.tscn::09e69a000a865ff057d499cf59afde17::1758092244::res://.godot/exported/133200997/export-d564fe8826948de03159665b57b220d9-car_body.scn
+res://Game Elements/Scenes/check_point.tscn::80104222c762515337d9432a870b9780::1758092244::res://.godot/exported/133200997/export-3f2a79175ebcce0803dfba564528dac5-check_point.scn
+res://Game Elements/Scenes/City.tscn::7e01fc0a68d2881f46aaae461afb1142::1758200482::res://.godot/exported/133200997/export-e7959e965816026498d2e5a7bceb9e31-City.scn
+res://Game Elements/Scenes/main.tscn::d1a1f97ea43a7ad0d7b4ca12c5d6a372::1758200482::res://.godot/exported/133200997/export-18c1300e06267438ff1c1c3afa768992-main.scn
+res://Game Elements/Scenes/mainmenu.tscn::3979f305f9bfcf1c1d181dafbdd200c9::1758200482::res://.godot/exported/133200997/export-3b20ae26a0fddd3718fcef9de1ed222e-mainmenu.scn
+res://Game Elements/Scenes/pause_menu.tscn::c94738f30ece4ceedd5d0cd2ebbdaa02::1758092244::res://.godot/exported/133200997/export-a497a6a5b4aa631caa9c491903ca5dfc-pause_menu.scn
+res://Game Elements/Scenes/player.tscn::91fcde25b1652ac489187e13f8fb87a3::1758092244::res://.godot/exported/133200997/export-abc08adf7590311ebc0c54135e828ea0-player.scn
+res://Game Elements/Scenes/audio_player.tscn::e7ddb5f69de6cf80fec59b4b59de9b11::1758092244::res://.godot/exported/133200997/export-75c60aae2c39a85252695299016964d1-audio_player.scn
+res://Game Elements/Scenes/end_game_menu.tscn::8be0def672d6b3b5b3e1b08a83b3fbe1::1758200483::res://.godot/exported/133200997/export-1525e66ef6255804119081dc908cbdf1-end_game_menu.scn
+res://Game Elements/Scenes/lamp.tscn::d479514405398fd7f5b8bca1b02f969c::1755901054::res://.godot/exported/133200997/export-b3145a0bd8769b82d26f2d629194b49a-lamp.scn
+res://Game Elements/Scenes/mesh_lib_tool_buildings.tscn::e04733e2acdc7b4e8d40fd0a3be6ff95::1755901054::res://.godot/exported/133200997/export-b96818b6140eb5f309139b25ffba973e-mesh_lib_tool_buildings.scn
+res://Game Elements/Scenes/mesh_lib_tool_roads.tscn::db4f93650df38bdc67cd72e79121b4bb::1758200482::res://.godot/exported/133200997/export-4eec5495ccdae7e7483254acc48e6cea-mesh_lib_tool_roads.scn
+res://buidingmap2.tres::4c47ded938999f070113f7f92c47bb79::1755901054::res://.godot/exported/133200997/export-26a994a328e5b8d48d8c95dcfedb0596-buidingmap2.res
+res://buidingmap.tres::df85808a3dade3ffc6c61f18f39283c8::1755901054::res://.godot/exported/133200997/export-2c7c88743a093c3fb98dd1b284d966e8-buidingmap.res
+res://buildingmap3.tres::cc1cf4d88da4e129afed9f929dec1e5e::1758200480::res://.godot/exported/133200997/export-868ac8ac3834cb3b24e89dfbf3d0cc00-buildingmap3.res
+res://roadmapofficial.tres::ee775f0983fd798d514b451710e97e87::1758200477::res://.godot/exported/133200997/export-4410ba3afc56f12e5a519e5dcb33b427-roadmapofficial.res

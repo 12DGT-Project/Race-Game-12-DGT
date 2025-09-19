@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cexphxom1mow7"]
 
-[ext_resource type="Script" path="res://Game Elements/Scripts/city.gd" id="1_epm78"]
+[ext_resource type="Script" uid="uid://d138o5qubimyf" path="res://Game Elements/Scripts/city.gd" id="1_epm78"]
 [ext_resource type="MeshLibrary" uid="uid://duoagilysu0kb" path="res://roadmapofficial.tres" id="2_g0or0"]
 [ext_resource type="PackedScene" uid="uid://bcb6q153eqt8f" path="res://Game Elements/Scenes/check_point.tscn" id="3_j88lv"]
 [ext_resource type="PackedScene" uid="uid://cn0kyegd17vhp" path="res://Game Elements/Scenes/player.tscn" id="3_lctyo"]
