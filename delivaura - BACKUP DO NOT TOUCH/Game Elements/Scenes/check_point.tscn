@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://bcb6q153eqt8f"]
+
+[ext_resource type="Script" uid="uid://ct5rtih1tqcil" path="res://Game Elements/Scripts/check_point.gd" id="1_oampm"]
+[ext_resource type="ArrayMesh" uid="uid://wu6pvmng780s" path="res://Assets (DO NOT MOVE)/Parcels/Parcel.obj" id="2_63fp3"]
+[ext_resource type="PackedScene" uid="uid://csa2gie5l21jv" path="res://Assets (DO NOT MOVE)/FBX/Finish.fbx" id="2_mcmgj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ryujq"]
+size = Vector3(3.4563, 4.1555, 3.64072)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rn3ec"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_63fp3"]
+material = SubResource("StandardMaterial3D_rn3ec")
+text = "Delivery is here:"
+font_size = 127
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63fp3"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0pk45"]
+material = SubResource("StandardMaterial3D_63fp3")
+radius = 15.0
+height = 30.0
+
+[node name="CheckPoint" type="Area3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+script = ExtResource("1_oampm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335873, 2.3694, -0.0989863)
+shape = SubResource("BoxShape3D_ryujq")
+
+[node name="ParcelSprite" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.0657539)
+mesh = ExtResource("2_63fp3")
+skeleton = NodePath("../Finish")
+
+[node name="Finish" parent="." instance=ExtResource("2_mcmgj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.239374, -0.315218, -0.0657539)
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 90.0
+
+[node name="Checkpoint Label" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 10, -0.457677, 11.5678, 0.522976)
+mesh = SubResource("TextMesh_63fp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08415, 84.0343, 0.433051)
+visible = false
+mesh = SubResource("SphereMesh_0pk45")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0.247051, 36.1291, 0)
+light_color = Color(0, 0.644246, 0.261156, 1)
+light_energy = 44.155
+light_indirect_energy = 1.132
+light_volumetric_fog_energy = 0.0
+light_size = 0.061
+spot_range = 329.299
+spot_attenuation = -0.54
+spot_angle = 21.0888
+spot_angle_attenuation = 0.25
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
