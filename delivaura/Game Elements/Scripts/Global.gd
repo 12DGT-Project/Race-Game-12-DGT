@@ -5,7 +5,7 @@ var timer_start_value : int = 100
 var timer_is_running : bool = false
 var game_paused : bool = false
 var total_aura_points : int = 90
-
+#gg
 func _physics_process(delta):
 	# Guard clause: Skip calculations when paused
 	if delta == 0:
